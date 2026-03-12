@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Virtual Manager — Business management made simple. Manage sales, purchases, items, expenses, and reports in one place." />
+  <title>Virtual Manager — Business Management Made Simple</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#" class="navbar__brand">
+        <div class="navbar__logo">
+          <i class="fa-solid fa-chart-line"></i>
+        </div>
+        <span class="navbar__name">Virtual Manager</span>
+      </a>
+
+      <nav class="navbar__nav" id="navMenu">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#how-it-helps" class="nav-link">How It Helps</a>
+        <a href="#screenshots" class="nav-link">Screenshots</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+
+      <a href="https://hfeexvvtlkptlewexgzc.supabase.co/storage/v1/object/public/releases/Vitual_Manager.rar" class="btn btn--primary navbar__cta">Download App</a>
+
+      <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <span class="hero__badge">Business Management App</span>
+          <h1 class="hero__headline">Manage Your Business<br />in One Place</h1>
+          <p class="hero__subtext">
+            Virtual Manager helps you track sales, purchases, items, expenses, and reports with a simple and organized system built for small businesses.
+          </p>
+          <div class="hero__actions">
+            <a href="https://hfeexvvtlkptlewexgzc.supabase.co/storage/v1/object/public/releases/Vitual_Manager.rar" class="btn btn--white">
+              <i class="fa-solid fa-download"></i> Download App
+            </a>
+            <a href="#features" class="btn btn--outline-white">
+              Learn More <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+          <div class="hero__trust">
+            <div class="hero__trust-item">
+              <i class="fa-solid fa-shield-halved"></i>
+              <span>Secure &amp; Reliable</span>
+            </div>
+            <div class="hero__trust-item">
+              <i class="fa-solid fa-wifi"></i>
+              <span>Works Offline</span>
+            </div>
+            <div class="hero__trust-item">
+              <i class="fa-solid fa-cloud"></i>
+              <span>Cloud Sync</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="phone-mockup">
+            <div class="phone-mockup__frame">
+              <div class="phone-mockup__screen">
+                <img src="assets/screenshot-dashboard.jpeg" alt="Dashboard" class="hero-mock-img" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__wave">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="about section" id="about">
+      <div class="container about__inner">
+        <div class="about__text">
+          <span class="section-label">About the App</span>
+          <h2 class="section-title">Built for Businesses That Keep It Simple</h2>
+          <p class="section-body">
+            Virtual Manager is a business operations app designed for small shops, traders, and retail businesses. Instead of scattered notebooks and spreadsheets, you get one organized system to handle everything — from recording a sale to checking your monthly report.
+          </p>
+          <p class="section-body">
+            The app helps reduce the burden of manual record keeping, keeps your business data organized, and gives you quick visibility into how your business is performing — all without needing any accounting expertise.
+          </p>
+          <a href="#features" class="btn btn--primary">Explore Features</a>
+        </div>
+
+        <div class="about__badges">
+          <div class="about__badge">
+            <div class="about__badge-icon">
+              <i class="fa-solid fa-layer-group"></i>
+            </div>
+            <div class="about__badge-text">
+              <strong>All-in-One System</strong>
+              <span>Sales, purchases, items, expenses, and reports — one app, one place.</span>
+            </div>
+          </div>
+          <div class="about__badge">
+            <div class="about__badge-icon about__badge-icon--green">
+              <i class="fa-solid fa-wifi"></i>
+            </div>
+            <div class="about__badge-text">
+              <strong>Works Offline</strong>
+              <span>Data is stored locally so you can keep working without internet access.</span>
+            </div>
+          </div>
+          <div class="about__badge">
+            <div class="about__badge-icon about__badge-icon--purple">
+              <i class="fa-solid fa-cloud-arrow-up"></i>
+            </div>
+            <div class="about__badge-text">
+              <strong>Cloud Sync</strong>
+              <span>Sync your data to the cloud for backup and cross-session reliability.</span>
+            </div>
+          </div>
+          <div class="about__badge">
+            <div class="about__badge-icon about__badge-icon--orange">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <div class="about__badge-text">
+              <strong>Fast &amp; Simple</strong>
+              <span>Designed to be quick to learn and easy to use for any business owner.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section class="features section section--alt" id="features">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Core Features</span>
+          <h2 class="section-title">Everything Your Business Needs</h2>
+          <p class="section-subtitle">Eight powerful modules to manage every aspect of your daily business operations.</p>
+        </div>
+
+        <div class="features__grid">
+
+          <div class="feature-card">
+            <div class="feature-card__icon feature-card__icon--blue">
+              <i class="fa-solid fa-file-invoice-dollar"></i>
+            </div>
+            <h3 class="feature-card__title">Sales Management</h3>
+            <p class="feature-card__desc">Record and manage sales transactions with ease. Track customer entries, payment details, and transaction history in one place.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__icon feature-card__icon--green">
+              <i class="fa-solid fa-truck"></i>
+            </div>
+            <h3 class="feature-card__title">Purchase Management</h3>
+            <p class="feature-card__desc">Keep supplier and purchase records organized. Add purchase entries and maintain a clear history of what you've bought and from whom.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__icon feature-card__icon--orange">
+              <i class="fa-solid fa-boxes-stacked"></i>
+            </div>
+            <h3 class="feature-card__title">Inventory Management</h3>
+            <p class="feature-card__desc">Add and manage business items efficiently. Keep an up-to-date catalog of your products with all relevant details in one organized list.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__icon feature-card__icon--red">
+              <i class="fa-solid fa-wallet"></i>
+            </div>
+            <h3 class="feature-card__title">Expense Tracking</h3>
+            <p class="feature-card__desc">Monitor business expenses and control spending. Log every business cost to get a clear picture of where your money is going.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__icon feature-card__icon--purple">
+              <i class="fa-solid fa-chart-bar"></i>
+            </div>
+            <h3 class="feature-card__title">Reports &amp; Insights</h3>
+            <p class="feature-card__desc">View organized sales and purchase reports to monitor performance. Make better decisions with clear data about your business activity.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__icon feature-card__icon--teal">
+              <i class="fa-solid fa-database"></i>
+            </div>
+            <h3 class="feature-card__title">Offline Storage</h3>
+            <p class="feature-card__desc">Keep working even when internet access is limited. All your data is stored locally so your business never stops because of connectivity issues.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__icon feature-card__icon--indigo">
+              <i class="fa-solid fa-cloud-arrow-up"></i>
+            </div>
+            <h3 class="feature-card__title">Cloud Sync</h3>
+            <p class="feature-card__desc">Sync your data for better reliability and continuity. Your business records stay backed up and available across sessions.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__icon feature-card__icon--slate">
+              <i class="fa-solid fa-lock"></i>
+            </div>
+            <h3 class="feature-card__title">Secure Login</h3>
+            <p class="feature-card__desc">User account login helps keep your business data protected. Access is restricted to you, so your records stay private and secure.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HOW IT HELPS ===== -->
+    <section class="how-it-helps section" id="how-it-helps">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Why Choose Vyapar</span>
+          <h2 class="section-title">Simplify How You Run Your Business</h2>
+          <p class="section-subtitle">Real benefits for business owners who need reliable, everyday tools — not complex software.</p>
+        </div>
+
+        <div class="benefits__list">
+
+          <div class="benefit-item">
+            <div class="benefit-item__icon">
+              <i class="fa-solid fa-layer-group"></i>
+            </div>
+            <div class="benefit-item__content">
+              <h3>Keep All Business Records in One Place</h3>
+              <p>No more scattered notebooks, spreadsheets, or memory. Virtual Manager brings your sales, purchases, expenses, and items into a single organized system that's always ready when you need it.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-item__icon benefit-item__icon--green">
+              <i class="fa-solid fa-receipt"></i>
+            </div>
+            <div class="benefit-item__content">
+              <h3>Track Daily Transactions Easily</h3>
+              <p>Recording a sale or a purchase takes just a few taps. The app is designed for speed so you can log transactions quickly and get back to running your business.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-item__icon benefit-item__icon--purple">
+              <i class="fa-solid fa-chart-pie"></i>
+            </div>
+            <div class="benefit-item__content">
+              <h3>View Business Reports Quickly</h3>
+              <p>Understand how your business is performing without spending hours compiling data. Reports are automatically generated and easy to read, giving you actionable business insights at a glance.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-item__icon benefit-item__icon--orange">
+              <i class="fa-solid fa-book-open"></i>
+            </div>
+            <div class="benefit-item__content">
+              <h3>Reduce Manual Bookkeeping Confusion</h3>
+              <p>Manual records are error-prone and hard to search. Virtual Manager keeps everything digital, organized, and searchable — reducing mistakes and saving you time every single day.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-item__icon benefit-item__icon--teal">
+              <i class="fa-solid fa-hard-drive"></i>
+            </div>
+            <div class="benefit-item__content">
+              <h3>Access Reliable Data Anywhere</h3>
+              <p>With local offline storage and cloud sync support, your data is always available — whether you're connected to the internet or not. Your business information is safe, backed up, and ready when you are.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCREENSHOTS ===== -->
+    <section class="screenshots section section--alt" id="screenshots">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">App Preview</span>
+          <h2 class="section-title">See the App in Action</h2>
+          <p class="section-subtitle">A clean and organized interface designed to make business management straightforward for everyone.</p>
+        </div>
+
+        <div class="screenshots__scroll-wrapper">
+          <div class="screenshots__track">
+
+            <div class="screenshot-frame">
+              <div class="screenshot-frame__label">Dashboard</div>
+              <div class="screenshot-frame__screen">
+                <img src="assets/screenshot-dashboard.jpeg" alt="Dashboard screen" class="ss-real-img" />
+              </div>
+            </div>
+
+            <div class="screenshot-frame">
+              <div class="screenshot-frame__label">Sales</div>
+              <div class="screenshot-frame__screen">
+                <img src="assets/screenshot-sales.jpeg" alt="Sales screen" class="ss-real-img" />
+              </div>
+            </div>
+
+            <div class="screenshot-frame">
+              <div class="screenshot-frame__label">Purchases</div>
+              <div class="screenshot-frame__screen">
+                <img src="assets/screenshot-purchases.jpeg" alt="Purchases screen" class="ss-real-img" />
+              </div>
+            </div>
+
+            <div class="screenshot-frame">
+              <div class="screenshot-frame__label">Reports</div>
+              <div class="screenshot-frame__screen">
+                <img src="assets/screenshot-reports.jpeg" alt="Reports screen" class="ss-real-img" />
+              </div>
+            </div>
+
+            <div class="screenshot-frame">
+              <div class="screenshot-frame__label">Inventory</div>
+              <div class="screenshot-frame__screen">
+                <img src="assets/screenshot-inventory.jpeg" alt="Inventory screen" class="ss-real-img" />
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="screenshots__hint">
+          <i class="fa-solid fa-arrow-left"></i>
+          Scroll to see all screens
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DOWNLOAD ===== -->
+    <section class="download section" id="download">
+      <div class="container download__inner">
+        <div class="download__content">
+          <span class="section-label section-label--light">Get Started Today</span>
+          <h2 class="download__title">Download Virtual Manager</h2>
+          <p class="download__subtitle">
+            Start managing your business smarter. Virtual Manager is available for Windows. Download the latest version and set up in minutes.
+          </p>
+          <div class="download__actions">
+            <a href="https://hfeexvvtlkptlewexgzc.supabase.co/storage/v1/object/public/releases/Vitual_Manager.rar" class="btn btn--white download__btn">
+              <i class="fa-solid fa-download"></i>
+              <span>
+                <strong>Download for Windows</strong>
+                <small>Latest Version — Free Download</small>
+              </span>
+            </a>
+          </div>
+          <p class="download__note">
+            <i class="fa-solid fa-circle-info"></i>
+            Version information will appear here. Compatible with Windows 10 and above.
+          </p>
+        </div>
+
+        <div class="download__features">
+          <div class="download__feature">
+            <i class="fa-solid fa-check-circle"></i>
+            <span>Free to download and use</span>
+          </div>
+          <div class="download__feature">
+            <i class="fa-solid fa-check-circle"></i>
+            <span>No technical setup required</span>
+          </div>
+          <div class="download__feature">
+            <i class="fa-solid fa-check-circle"></i>
+            <span>Works offline immediately</span>
+          </div>
+          <div class="download__feature">
+            <i class="fa-solid fa-check-circle"></i>
+            <span>Secure local data storage</span>
+          </div>
+          <div class="download__feature">
+            <i class="fa-solid fa-check-circle"></i>
+            <span>Cloud sync available</span>
+          </div>
+          <div class="download__feature">
+            <i class="fa-solid fa-check-circle"></i>
+            <span>Update notifications built in</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="faq section section--alt" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">FAQ</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Everything you need to know about Virtual Manager before you get started.</p>
+        </div>
+
+        <div class="faq__list">
+
+          <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+              <span>What is Virtual Manager?</span>
+              <i class="fa-solid fa-chevron-down faq-item__icon"></i>
+            </button>
+            <div class="faq-item__answer">
+              <p>Virtual Manager is a business operations app designed for small shops, traders, and retail businesses. It lets you manage sales, purchases, inventory, expenses, and reports from one simple and organized system. The app is built to make day-to-day business record keeping easier, faster, and more reliable — without requiring any accounting expertise.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+              <span>Who is this app for?</span>
+              <i class="fa-solid fa-chevron-down faq-item__icon"></i>
+            </button>
+            <div class="faq-item__answer">
+              <p>Virtual Manager is designed for small business owners, shopkeepers, traders, and anyone running a retail or service-based business. If you currently use notebooks, spreadsheets, or loose papers to keep track of your sales and purchases, this app is built specifically to replace that and make your record keeping much more organized.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+              <span>Can I use it offline?</span>
+              <i class="fa-solid fa-chevron-down faq-item__icon"></i>
+            </button>
+            <div class="faq-item__answer">
+              <p>Yes. Virtual Manager stores your data locally on your device, which means the app works fully without an internet connection. You can record sales, purchases, expenses, and manage items even when you are offline. Your data is always available, regardless of connectivity.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+              <span>Does it support cloud sync?</span>
+              <i class="fa-solid fa-chevron-down faq-item__icon"></i>
+            </button>
+            <div class="faq-item__answer">
+              <p>Yes. The app includes cloud sync support so your business data can be backed up and kept available across sessions. This helps ensure your records are not lost and can be restored if needed. Local storage and cloud sync work together to give you reliable access to your business data at all times.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+              <span>What business records can I manage in the app?</span>
+              <i class="fa-solid fa-chevron-down faq-item__icon"></i>
+            </button>
+            <div class="faq-item__answer">
+              <p>You can manage the following in Virtual Manager: Sales records and customer transaction entries, Purchase records from suppliers, Inventory and item lists with product details, Business expenses, Reports covering sales and purchase activity, and Recent transaction history. Everything is organized in one system so you always have a clear view of your business operations.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+              <span>How do I download and install the app?</span>
+              <i class="fa-solid fa-chevron-down faq-item__icon"></i>
+            </button>
+            <div class="faq-item__answer">
+              <p>Click the "Download App" button on this page to download the latest installer. Once the download is complete, run the installer file and follow the setup steps. The app will be ready to use in a few minutes. No technical knowledge is required to get started.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <i class="fa-solid fa-chart-line"></i>
+        </div>
+        <span class="footer__name">Virtual Manager</span>
+        <p class="footer__tagline">Business management made simple. Built for small businesses.</p>
+      </div>
+
+      <div class="footer__links">
+        <h4 class="footer__heading">Quick Links</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how-it-helps">How It Helps</a></li>
+          <li><a href="#screenshots">Screenshots</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__support">
+        <h4 class="footer__heading">Support</h4>
+        <ul>
+          <li><a href="#download">Download App</a></li>
+          <li><a href="#">Contact Support</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bar">
+      <div class="container footer__bar-inner">
+        <span>&copy; 2024 Virtual Manager. All rights reserved.</span>
+        <a href="#download" class="footer__download-link">
+          <i class="fa-solid fa-download"></i> Download App
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
