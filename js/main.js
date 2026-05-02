@@ -1,9 +1,25 @@
 /* =============================================
-   VYAPAR MANAGEMENT — MAIN JAVASCRIPT
+   VIRTUAL MANAGER — MAIN JAVASCRIPT
    ============================================= */
 
 (function () {
   'use strict';
+
+  /* ---- rAF-throttled scroll runner ---- */
+  let scrollTicking = false;
+  const scrollHandlers = [];
+
+  function onScroll() {
+    if (!scrollTicking) {
+      window.requestAnimationFrame(function () {
+        scrollHandlers.forEach(function (fn) { fn(); });
+        scrollTicking = false;
+      });
+      scrollTicking = true;
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
 
   /* ---- Navbar: Sticky shadow on scroll ---- */
   const navbar = document.getElementById('navbar');
@@ -16,28 +32,40 @@
     }
   }
 
-  window.addEventListener('scroll', handleNavbarScroll, { passive: true });
+  scrollHandlers.push(handleNavbarScroll);
   handleNavbarScroll();
 
   /* ---- Navbar: Hamburger / mobile menu ---- */
   const hamburger = document.getElementById('hamburger');
   const navMenu = document.getElementById('navMenu');
 
+  function closeMenu() {
+    navMenu.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.setAttribute('aria-label', 'Toggle menu');
+    document.body.style.overflow = '';
+  }
+
+  function openMenu() {
+    navMenu.classList.add('open');
+    hamburger.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    hamburger.setAttribute('aria-label', 'Close menu');
+    document.body.style.overflow = 'hidden';
+  }
+
   if (hamburger && navMenu) {
     hamburger.addEventListener('click', function () {
-      const isOpen = navMenu.classList.toggle('open');
-      hamburger.classList.toggle('open', isOpen);
-      hamburger.setAttribute('aria-label', isOpen ? 'Close menu' : 'Toggle menu');
-      document.body.style.overflow = isOpen ? 'hidden' : '';
+      if (navMenu.classList.contains('open')) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
     });
 
     navMenu.querySelectorAll('.nav-link').forEach(function (link) {
-      link.addEventListener('click', function () {
-        navMenu.classList.remove('open');
-        hamburger.classList.remove('open');
-        hamburger.setAttribute('aria-label', 'Toggle menu');
-        document.body.style.overflow = '';
-      });
+      link.addEventListener('click', closeMenu);
     });
 
     document.addEventListener('click', function (e) {
@@ -46,10 +74,14 @@
         !navMenu.contains(e.target) &&
         !hamburger.contains(e.target)
       ) {
-        navMenu.classList.remove('open');
-        hamburger.classList.remove('open');
-        hamburger.setAttribute('aria-label', 'Toggle menu');
-        document.body.style.overflow = '';
+        closeMenu();
+      }
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && navMenu.classList.contains('open')) {
+        closeMenu();
+        hamburger.focus();
       }
     });
   }
@@ -76,8 +108,24 @@
     });
   }
 
-  window.addEventListener('scroll', updateActiveNavLink, { passive: true });
+  scrollHandlers.push(updateActiveNavLink);
   updateActiveNavLink();
+
+  /* ---- YouTube click-to-load facade ---- */
+  const videoFacade = document.getElementById('videoFacade');
+  if (videoFacade) {
+    videoFacade.addEventListener('click', function () {
+      const id = videoFacade.getAttribute('data-video-id');
+      const iframe = document.createElement('iframe');
+      iframe.className = 'video__iframe';
+      iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+      iframe.title = 'Virtual Manager - App Overview';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      iframe.allowFullscreen = true;
+      iframe.setAttribute('loading', 'lazy');
+      videoFacade.replaceWith(iframe);
+    });
+  }
 
   /* ---- FAQ Accordion ---- */
   const faqItems = document.querySelectorAll('.faq-item');
@@ -91,20 +139,18 @@
     question.addEventListener('click', function () {
       const isExpanded = question.getAttribute('aria-expanded') === 'true';
 
-      // Close all other items
       faqItems.forEach(function (otherItem) {
         const otherQ = otherItem.querySelector('.faq-item__question');
         const otherA = otherItem.querySelector('.faq-item__answer');
         if (otherQ && otherA && otherItem !== item) {
           otherQ.setAttribute('aria-expanded', 'false');
-          otherA.classList.remove('open');
+          otherA.style.maxHeight = '0px';
         }
       });
 
-      // Toggle current item
       const newState = !isExpanded;
       question.setAttribute('aria-expanded', String(newState));
-      answer.classList.toggle('open', newState);
+      answer.style.maxHeight = newState ? answer.scrollHeight + 'px' : '0px';
     });
   });
 

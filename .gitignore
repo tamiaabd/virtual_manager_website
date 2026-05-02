@@ -1,2 +1,5 @@
 firebase-debug.log
 *.log
+*.psd
+.firebase/
+node_modules/
