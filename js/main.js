@@ -206,6 +206,112 @@
     });
   }
 
+  /* ---- Download code gate ---- */
+  (function () {
+    var DOWNLOAD_CODE = 'tamia007';
+    var STORAGE_KEY = 'vm_dl_unlocked';
+
+    var gate = document.getElementById('codeGate');
+    var downloadLinks = document.querySelectorAll('a[href*="supabase.co/storage"]');
+
+    if (!gate || downloadLinks.length === 0) return;
+
+    var form = document.getElementById('codeGateForm');
+    var input = document.getElementById('codeGateInput');
+    var errorEl = document.getElementById('codeGateError');
+    var card = gate.querySelector('.code-gate__card');
+    var pendingHref = null;
+
+    function isUnlocked() {
+      try {
+        return sessionStorage.getItem(STORAGE_KEY) === '1';
+      } catch (e) {
+        return false;
+      }
+    }
+
+    function setUnlocked() {
+      try {
+        sessionStorage.setItem(STORAGE_KEY, '1');
+      } catch (e) { /* ignore (private mode) */ }
+    }
+
+    function startDownload(href) {
+      if (!href) return;
+      var a = document.createElement('a');
+      a.href = href;
+      a.rel = 'noopener';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+
+    function openGate() {
+      if (errorEl) errorEl.hidden = true;
+      if (card) card.classList.remove('code-gate__card--shake');
+      if (input) input.value = '';
+      gate.classList.add('is-open');
+      gate.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      if (input) {
+        window.requestAnimationFrame(function () { input.focus(); });
+      }
+    }
+
+    function closeGate() {
+      gate.classList.remove('is-open');
+      gate.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      pendingHref = null;
+      if (input) input.value = '';
+      if (errorEl) errorEl.hidden = true;
+    }
+
+    downloadLinks.forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        if (isUnlocked()) return; // already unlocked this session — download normally
+        e.preventDefault();
+        pendingHref = link.getAttribute('href');
+        openGate();
+      });
+    });
+
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var value = input ? input.value.trim().toLowerCase() : '';
+        if (value === DOWNLOAD_CODE) {
+          setUnlocked();
+          var href = pendingHref;
+          closeGate();
+          startDownload(href);
+        } else {
+          if (errorEl) errorEl.hidden = false;
+          if (card) {
+            card.classList.remove('code-gate__card--shake');
+            // reflow to restart the animation
+            void card.offsetWidth;
+            card.classList.add('code-gate__card--shake');
+          }
+          if (input) {
+            input.focus();
+            input.select();
+          }
+        }
+      });
+    }
+
+    gate.querySelectorAll('[data-gate-close]').forEach(function (el) {
+      el.addEventListener('click', closeGate);
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && gate.classList.contains('is-open')) {
+        closeGate();
+      }
+    });
+  })();
+
   /* ---- Intersection Observer: fade-in on scroll ---- */
   if ('IntersectionObserver' in window) {
     const observerOptions = {
@@ -223,7 +329,7 @@
     }, observerOptions);
 
     document.querySelectorAll(
-      '.feature-card, .benefit-item, .about__badge, .screenshot-frame, .download__feature'
+      '.feature-card, .extra-item, .benefit-item, .about__badge, .screenshot-frame, .download__feature'
     ).forEach(function (el) {
       el.classList.add('animate-on-scroll');
       observer.observe(el);

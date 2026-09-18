@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#2563EB" />
 
-  <title>Virtual Manager — Free Offline Business App for Sales, Inventory & Reports</title>
+  <title>Virtual Manager — Free Offline Business App with Inventory, Payroll & Team Access</title>
   <meta name="description"
-    content="Free offline business management app for small shops. Track sales, purchases, inventory, expenses and view instant reports — works without internet, with optional cloud sync. Available for Windows, Android and macOS." />
-  <meta name="keywords" content="business management app, small business inventory app, offline sales tracker, free shop billing app, purchase and sales record app, retail business software" />
+    content="Free offline-first business app for shops and traders. Sales, purchases, batch-tracked inventory, expenses, employee attendance and payroll, stock ledger and PDF statements — runs with no account and no internet, syncs to the cloud when you connect. Windows and Android." />
+  <meta name="keywords" content="business management app, offline business app, small business inventory app, employee attendance app, payroll app for small business, stock ledger report, FIFO inventory app, staff access control app, offline sales tracker, free shop billing app, purchase and sales record app, excel import business app, urdu business app, retail business software" />
 
   <link rel="canonical" href="https://virtual-manager.web.app/" />
 
@@ -17,7 +17,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://virtual-manager.web.app/" />
   <meta property="og:title" content="Virtual Manager — Free Offline Business App" />
-  <meta property="og:description" content="Replace notebooks and spreadsheets. Track sales, purchases, inventory and reports — works offline, syncs to the cloud. Free download." />
+  <meta property="og:description" content="Replace notebooks and spreadsheets. Sales, purchases, inventory, expenses, staff attendance and payroll — plus real profit after stock cost. Works with no account and no internet. Free download." />
   <meta property="og:image" content="https://virtual-manager.web.app/assets/virtual%20manager%20feature%20image.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -26,7 +26,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Virtual Manager — Free Offline Business App" />
-  <meta name="twitter:description" content="Replace notebooks and spreadsheets. Track sales, purchases, inventory and reports — works offline, syncs to the cloud." />
+  <meta name="twitter:description" content="Replace notebooks and spreadsheets. Sales, purchases, inventory, expenses, staff attendance and payroll — works with no account and no internet, syncs to the cloud." />
   <meta name="twitter:image" content="https://virtual-manager.web.app/assets/virtual%20manager%20feature%20image.jpg" />
 
   <!-- Preload hero image (LCP) -->
@@ -44,7 +44,7 @@
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /></noscript>
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css?v=2" />
+  <link rel="stylesheet" href="css/styles.css?v=4" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
@@ -56,19 +56,29 @@
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "Virtual Manager",
-    "description": "Free offline business management app for small shops. Track sales, purchases, inventory, expenses and view instant reports.",
+    "description": "Free offline-first business management app for shops and traders. Sales, purchases, batch-tracked inventory, expenses, employee attendance and payroll, stock ledger and PDF statements — with staff logins and permissions, and optional cloud sync.",
     "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Windows, Android, macOS",
+    "operatingSystem": "Windows, Android",
+    "softwareVersion": "1.9.8",
     "offers": {
       "@type": "Offer",
       "price": "0",
       "priceCurrency": "USD"
     },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "ratingCount": "120"
-    }
+    "featureList": [
+      "Sales and retail billing with wholesale and retail modes",
+      "Purchase and supplier management with party balances",
+      "FIFO batch-tracked inventory with automatic cost of goods sold",
+      "Expense tracking linked to purchases",
+      "Employee attendance and monthly payroll",
+      "Live profit overview based on real stock cost",
+      "Inventory movement ledger and stock report",
+      "PDF statements, receipts and out pass",
+      "Staff access by QR or one-time code with roles and permissions",
+      "Excel (XLSX) data import",
+      "Works fully offline with optional cloud sync",
+      "Encrypted on-device storage with App Lock"
+    ]
   }
   </script>
 
@@ -83,15 +93,15 @@
         "name": "What is Virtual Manager?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Virtual Manager is a business operations app for small shops, traders, and retail businesses. It manages sales, purchases, inventory, expenses, and reports in one organized system, no accounting expertise required."
+          "text": "Virtual Manager is an offline-first business app for small shops, traders and factories. It handles sales, purchases, batch-tracked inventory, expenses, payments, employee attendance and payroll from one organized system, and shows you real profit after stock cost. Your team can get their own logins with limited access. It works with no internet and no account, and syncs to the cloud when you connect — without requiring any accounting expertise."
         }
       },
       {
         "@type": "Question",
-        "name": "Is Virtual Manager free?",
+        "name": "Who is this app for?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. Virtual Manager is free to download and use, with no subscription required for the core features."
+          "text": "Virtual Manager is designed for small business owners, shopkeepers, traders, and anyone running a retail or service-based business. If you currently use notebooks, spreadsheets, or loose papers to keep track of your sales and purchases, this app is built specifically to replace that and make your record keeping much more organized."
         }
       },
       {
@@ -99,15 +109,7 @@
         "name": "Can I use it offline?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. Virtual Manager stores your data locally on your device, so you can record sales, purchases, expenses, and manage items even without internet."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Where is my business data stored?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Your data is stored locally on your device by default. If you enable cloud sync, an encrypted backup is also kept in the cloud so you can restore it on another device."
+          "text": "Yes — completely. The full app runs on your device with no signup, no login and no internet connection at all. Sales, purchases, expenses, inventory, attendance and payroll all work offline, and so do PDF exports and receipts. Cloud sync is optional: connect whenever you want and everything you recorded offline uploads then. Nothing you enter while offline is lost."
         }
       },
       {
@@ -115,7 +117,103 @@
         "name": "Does it support cloud sync?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. Cloud sync backs up your business data and keeps it available across sessions and devices."
+          "text": "Yes. Sign in and your records back up to the cloud and sync across every device you use. Work you do while offline is queued safely and uploads the moment you reconnect. If you started out offline without an account, you can create one later and bring all your existing data with you."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What business records can I manage in the app?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Virtual Manager covers six modules: Purchases (suppliers, purchase entries and payments), Sales (wholesale and retail customers, sales and customer payments), Inventory (items, stock batches and adjustments), Expenses, Employees (attendance, monthly salary and payments) and the Ledger (every stock movement plus a stock report). On top of that you get payment history across all parties, PDF statements, and a live overview of profit for any date range."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can my staff use the app without seeing everything?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You can create access for a staff member and hand it to them as a QR code to scan or a one-time code to type — they don't need an email account of their own. Each person gets a role, and you can grant or deny individual permissions on top of it, so a salesman sees only sales and a storekeeper only inventory. Salary figures can be hidden from everyone but you. You can also require that edits and deletions made by staff come to you for approval before they take effect, and revoke anyone's access at any time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I track employee attendance and salaries?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Add your employees with their monthly salary and joining date, then mark each day as present, absent, half day or leave. At the end of the month you close the salary period and the app works out what each person is owed from the days they actually worked. You can pay in full or in parts, and every payment is tracked as pending, partially paid or paid."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I import my existing records from Excel?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The built-in data importer reads an Excel (.xlsx) workbook and brings in purchases, sales, items, expenses, salaries, customers or suppliers. Pick the sheet and header row, and the app maps your columns for you — you can correct any it gets wrong. It also spots the same person or item spelled differently and offers to merge them. Nothing is saved until you check the preview and confirm."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I export or print my records?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You can export a purchase statement, a sale statement, the stock ledger or the stock report as a PDF — for all records, a single month, or any date range you choose — and preview it before you save, print or share it. Individual receipts can be shared straight from the app, and you can print an out pass with the driver's name and vehicle number for goods leaving your premises."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the app support Urdu?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can type Urdu anywhere in the app — customer names, item names, notes — and it displays in proper Nastaliq script while your English text keeps its own font. Urdu also renders correctly on printed receipts and PDF exports. You can choose between Jameel Noori Nastaleeq and Noto Nastaliq Urdu in settings. Note that the app's own menus and buttons are in English; it's your data that can be in Urdu."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I download and install the app?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pick your platform in the download section. On Windows you'll get an installer — unzip it and run the setup. On Android you'll get an APK file; open it and allow installation from your browser when your phone asks. Either way the app is ready in a few minutes, and you can start using it straight away without creating an account."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Virtual Manager free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Virtual Manager is free to download and use. The core features — sales, purchases, inventory, expenses, employees and payroll, the stock ledger, PDF exports and offline access — are available at no cost and with no subscription required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is my business data stored and who owns it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your data is stored locally on your own device by default, and it always belongs to you. If you turn on cloud sync, an encrypted backup is also stored in the cloud so you can restore it on another device. We never sell or share your business records."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use Virtual Manager on more than one device?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Sign in with the same account on each device and your sales, purchases, inventory and payroll stay in sync between your phone, your laptop and your shop computer. One detail worth knowing: staff accounts are limited to one device at a time for entering data. If a staff member signs in somewhere new, their old device switches to view-only and anything it had not yet synced is kept safe rather than discarded. As the owner you are not restricted this way."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I get support if I run into a problem?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Email us at support@virtual-manager.app with a short description of the issue and, if possible, a screenshot. We usually reply within one business day."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When will the iOS and macOS versions be available?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Both are in active development — the iOS build will be released through the App Store, and a macOS build will follow. Until then you can use Virtual Manager on Android and Windows, and your data syncs between them. Email us if you'd like to be notified at launch."
         }
       }
     ]
@@ -141,6 +239,7 @@
         <a href="#about" class="nav-link">About</a>
         <a href="#video" class="nav-link">Video</a>
         <a href="#features" class="nav-link">Features</a>
+        <a href="#more" class="nav-link">More</a>
         <a href="#how-it-helps" class="nav-link">How It Helps</a>
         <a href="#screenshots" class="nav-link">Screenshots</a>
         <a href="#faq" class="nav-link">FAQ</a>
@@ -162,11 +261,12 @@
     <section class="hero" id="hero">
       <div class="container hero__inner">
         <div class="hero__content">
-          <span class="hero__badge">Free · Offline · Cloud Sync</span>
+          <span class="hero__badge">Free · Offline-First · Team Access</span>
           <h1 class="hero__headline">Replace Notebooks.<br />Run Your Shop in Minutes.</h1>
           <p class="hero__subtext">
-            Record a sale in seconds, track today's profit at a glance, and never lose a purchase entry again.
-            Virtual Manager is the simple business app for shopkeepers, traders and small retailers.
+            Record a sale in seconds. See real profit after what the stock actually cost you. Track staff attendance
+            and salaries, and give your team their own logins that show only what you allow. Virtual Manager runs
+            fully offline — no account needed to start.
           </p>
           <div class="hero__actions hero__actions--grid">
             <a href="https://hfeexvvtlkptlewexgzc.supabase.co/storage/v1/object/public/releases/latest-windows-installer.zip"
@@ -185,12 +285,11 @@
                 <small>APK · Android 7+</small>
               </span>
             </a>
-            <a href="https://hfeexvvtlkptlewexgzc.supabase.co/storage/v1/object/public/releases/latest.dmg"
-              class="btn btn--platform" rel="noopener">
+            <a href="#faq" class="btn btn--platform">
               <i class="fa-brands fa-apple" aria-hidden="true"></i>
               <span>
                 <strong>macOS</strong>
-                <small>DMG · macOS 11+</small>
+                <small>Coming soon</small>
               </span>
             </a>
             <a href="#faq" class="btn btn--platform">
@@ -212,7 +311,7 @@
             </div>
             <div class="hero__trust-item">
               <i class="fa-solid fa-wifi" aria-hidden="true"></i>
-              <span>Works Offline</span>
+              <span>Works Fully Offline</span>
             </div>
           </div>
         </div>
@@ -256,13 +355,14 @@
           <span class="section-label">About the App</span>
           <h2 class="section-title">Built for Businesses That Keep It Simple</h2>
           <p class="section-body">
-            Virtual Manager is a business operations app designed for small shops, traders, and retail businesses.
-            Instead of scattered notebooks and spreadsheets, you get one organized system to handle everything — from
-            recording a sale to checking your monthly report.
+            Virtual Manager is an offline-first business app for shops, traders and small factories. One system handles
+            the whole operation — purchases and suppliers, wholesale and retail sales, batch-tracked stock, expenses,
+            payments, employee attendance and monthly payroll.
           </p>
           <p class="section-body">
-            The app helps reduce the burden of manual record keeping, keeps your business data organized, and gives you
-            quick visibility into how your business is performing — all without needing any accounting expertise.
+            It runs completely without internet and without an account, so your business never stops for a bad
+            connection. Connect later and everything syncs across your devices. Your team can get their own logins with
+            only the access you grant them — no accounting expertise needed, by you or by them.
           </p>
           <a href="#features" class="btn btn--primary">Explore Features</a>
         </div>
@@ -274,7 +374,7 @@
             </div>
             <div class="about__badge-text">
               <strong>All-in-One System</strong>
-              <span>Sales, purchases, items, expenses, and reports — one app, one place.</span>
+              <span>Sales, purchases, inventory, expenses, payroll and ledger — one app, one place.</span>
             </div>
           </div>
           <div class="about__badge">
@@ -282,17 +382,17 @@
               <i class="fa-solid fa-wifi"></i>
             </div>
             <div class="about__badge-text">
-              <strong>Works Offline</strong>
-              <span>Data is stored locally so you can keep working without internet access.</span>
+              <strong>Works Fully Offline</strong>
+              <span>No signup, no login, no internet — the complete app runs on your device.</span>
             </div>
           </div>
           <div class="about__badge">
             <div class="about__badge-icon about__badge-icon--purple">
-              <i class="fa-solid fa-cloud-arrow-up"></i>
+              <i class="fa-solid fa-users"></i>
             </div>
             <div class="about__badge-text">
-              <strong>Cloud Sync</strong>
-              <span>Sync your data to the cloud for backup and cross-session reliability.</span>
+              <strong>Built for Teams</strong>
+              <span>Staff logins with roles and permissions, so everyone sees only their part.</span>
             </div>
           </div>
           <div class="about__badge">
@@ -336,7 +436,7 @@
         <div class="section-header">
           <span class="section-label">Core Features</span>
           <h2 class="section-title">Everything Your Business Needs</h2>
-          <p class="section-subtitle">Eight powerful modules to manage every aspect of your daily business operations.
+          <p class="section-subtitle">Twelve powerful modules to manage every aspect of your daily business operations.
           </p>
         </div>
 
@@ -346,27 +446,27 @@
             <div class="feature-card__icon feature-card__icon--blue">
               <i class="fa-solid fa-file-invoice-dollar"></i>
             </div>
-            <h3 class="feature-card__title">Sales Management</h3>
-            <p class="feature-card__desc">Record and manage sales transactions with ease. Track customer entries,
-              payment details, and transaction history in one place.</p>
+            <h3 class="feature-card__title">Sales &amp; Retail Billing</h3>
+            <p class="feature-card__desc">Separate wholesale and retail modes, with Quick Sell for fast counter billing.
+              Sell for cash or on credit, and the app remembers the rate each customer last paid.</p>
           </div>
 
           <div class="feature-card">
             <div class="feature-card__icon feature-card__icon--green">
               <i class="fa-solid fa-truck"></i>
             </div>
-            <h3 class="feature-card__title">Purchase Management</h3>
-            <p class="feature-card__desc">Keep supplier and purchase records organized. Add purchase entries and
-              maintain a clear history of what you've bought and from whom.</p>
+            <h3 class="feature-card__title">Purchases &amp; Suppliers</h3>
+            <p class="feature-card__desc">Record multi-item purchases and pay per line or per invoice by cash, bank or
+              cheque. Every supplier's running balance stays up to date on its own.</p>
           </div>
 
           <div class="feature-card">
             <div class="feature-card__icon feature-card__icon--orange">
               <i class="fa-solid fa-boxes-stacked"></i>
             </div>
-            <h3 class="feature-card__title">Inventory Management</h3>
-            <p class="feature-card__desc">Add and manage business items efficiently. Keep an up-to-date catalog of your
-              products with all relevant details in one organized list.</p>
+            <h3 class="feature-card__title">Smart Inventory (FIFO)</h3>
+            <p class="feature-card__desc">Stock is tracked in batches, so each sale is costed against the batch it
+              actually came from. You can't oversell what you don't have.</p>
           </div>
 
           <div class="feature-card">
@@ -374,44 +474,217 @@
               <i class="fa-solid fa-wallet"></i>
             </div>
             <h3 class="feature-card__title">Expense Tracking</h3>
-            <p class="feature-card__desc">Monitor business expenses and control spending. Log every business cost to get
-              a clear picture of where your money is going.</p>
+            <p class="feature-card__desc">Log costs in multi-row expense sheets and tie any expense to the exact
+              purchase it belongs to — so you see where the money really went.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__icon feature-card__icon--rose">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <h3 class="feature-card__title">Employees &amp; Payroll</h3>
+            <p class="feature-card__desc">Mark attendance as present, absent, half day or leave, then close the month
+              with salary worked out from the days actually worked. Partial payments supported.</p>
           </div>
 
           <div class="feature-card">
             <div class="feature-card__icon feature-card__icon--purple">
-              <i class="fa-solid fa-chart-bar"></i>
+              <i class="fa-solid fa-chart-line"></i>
             </div>
-            <h3 class="feature-card__title">Reports &amp; Insights</h3>
-            <p class="feature-card__desc">View organized sales and purchase reports to monitor performance. Make better
-              decisions with clear data about your business activity.</p>
+            <h3 class="feature-card__title">Live Profit Overview</h3>
+            <p class="feature-card__desc">See real profit, not just sales totals — every sale is counted against what
+              that stock cost you. Filter by today, this month, this year or any range.</p>
           </div>
 
           <div class="feature-card">
-            <div class="feature-card__icon feature-card__icon--teal">
-              <i class="fa-solid fa-database"></i>
+            <div class="feature-card__icon feature-card__icon--cyan">
+              <i class="fa-solid fa-book-open"></i>
             </div>
-            <h3 class="feature-card__title">Offline Storage</h3>
-            <p class="feature-card__desc">Keep working even when internet access is limited. All your data is stored
-              locally so your business never stops because of connectivity issues.</p>
+            <h3 class="feature-card__title">Stock Ledger &amp; Reports</h3>
+            <p class="feature-card__desc">Every stock movement in one searchable ledger, plus a stock report showing
+              opening balance, stock received, consumption and closing balance per item.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__icon feature-card__icon--amber">
+              <i class="fa-solid fa-file-pdf"></i>
+            </div>
+            <h3 class="feature-card__title">PDF Statements &amp; Receipts</h3>
+            <p class="feature-card__desc">Export purchase and sale statements, the ledger and the stock report as PDFs.
+              Share receipts instantly, or print an out pass with driver and vehicle details.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__icon feature-card__icon--slate">
+              <i class="fa-solid fa-user-shield"></i>
+            </div>
+            <h3 class="feature-card__title">Team Access &amp; Permissions</h3>
+            <p class="feature-card__desc">Staff sign in by scanning a QR code or entering a one-time code. Roles and
+              per-person permissions decide what each one sees — and their edits can wait for your approval.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__icon feature-card__icon--violet">
+              <i class="fa-solid fa-file-excel"></i>
+            </div>
+            <h3 class="feature-card__title">Excel Data Import</h3>
+            <p class="feature-card__desc">Already keep records in a spreadsheet? Import purchases, sales, items,
+              expenses, salaries, customers and suppliers, with columns mapped for you and a preview before anything
+              saves.</p>
           </div>
 
           <div class="feature-card">
             <div class="feature-card__icon feature-card__icon--indigo">
               <i class="fa-solid fa-cloud-arrow-up"></i>
             </div>
-            <h3 class="feature-card__title">Cloud Sync</h3>
-            <p class="feature-card__desc">Sync your data for better reliability and continuity. Your business records
-              stay backed up and available across sessions.</p>
+            <h3 class="feature-card__title">Offline-First + Cloud Sync</h3>
+            <p class="feature-card__desc">The complete app works with no internet and no account at all. Connect when
+              you're ready and your records sync across your devices — nothing queued is ever lost.</p>
           </div>
 
           <div class="feature-card">
-            <div class="feature-card__icon feature-card__icon--slate">
+            <div class="feature-card__icon feature-card__icon--teal">
               <i class="fa-solid fa-lock"></i>
             </div>
-            <h3 class="feature-card__title">Secure Login</h3>
-            <p class="feature-card__desc">User account login helps keep your business data protected. Access is
-              restricted to you, so your records stay private and secure.</p>
+            <h3 class="feature-card__title">Security &amp; App Lock</h3>
+            <p class="feature-card__desc">Your data sits in an encrypted database on your device. Lock the app behind a
+              password with a recovery code, and see who changed what on every record.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MORE IN THE APP ===== -->
+    <section class="extras section" id="more">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Built-In Extras</span>
+          <h2 class="section-title">More in the App</h2>
+          <p class="section-subtitle">Smaller touches that solve the everyday problems most business apps ignore.</p>
+        </div>
+
+        <div class="extras__grid">
+
+          <div class="extra-item">
+            <div class="extra-item__icon extra-item__icon--blue">
+              <i class="fa-solid fa-language"></i>
+            </div>
+            <div class="extra-item__text">
+              <strong>English &amp; Urdu Entry</strong>
+              <span>Type in Urdu anywhere — names, items and receipts render in proper Nastaliq alongside
+                English.</span>
+            </div>
+          </div>
+
+          <div class="extra-item">
+            <div class="extra-item__icon extra-item__icon--rose">
+              <i class="fa-solid fa-stamp"></i>
+            </div>
+            <div class="extra-item__text">
+              <strong>Custom Receipt Stamp</strong>
+              <span>Design your own business stamp — text, arcs, ink colour — and it prints on your receipts.</span>
+            </div>
+          </div>
+
+          <div class="extra-item">
+            <div class="extra-item__icon extra-item__icon--green">
+              <i class="fa-solid fa-percent"></i>
+            </div>
+            <div class="extra-item__text">
+              <strong>Sales Tax</strong>
+              <span>Turn on tax when you need it, set your rate and show your registration number on sales.</span>
+            </div>
+          </div>
+
+          <div class="extra-item">
+            <div class="extra-item__icon extra-item__icon--purple">
+              <i class="fa-solid fa-user-tie"></i>
+            </div>
+            <div class="extra-item__text">
+              <strong>Sales Agents</strong>
+              <span>Track who brought each customer in, and report profit per agent.</span>
+            </div>
+          </div>
+
+          <div class="extra-item">
+            <div class="extra-item__icon extra-item__icon--orange">
+              <i class="fa-solid fa-hand-holding-dollar"></i>
+            </div>
+            <div class="extra-item__text">
+              <strong>Independent Sales</strong>
+              <span>Sell something you never purchased into stock, without breaking your inventory.</span>
+            </div>
+          </div>
+
+          <div class="extra-item">
+            <div class="extra-item__icon extra-item__icon--amber">
+              <i class="fa-solid fa-truck-ramp-box"></i>
+            </div>
+            <div class="extra-item__text">
+              <strong>Out Pass</strong>
+              <span>Print a gate pass with driver name and vehicle number for goods leaving your premises.</span>
+            </div>
+          </div>
+
+          <div class="extra-item">
+            <div class="extra-item__icon extra-item__icon--teal">
+              <i class="fa-solid fa-receipt"></i>
+            </div>
+            <div class="extra-item__text">
+              <strong>Payment History</strong>
+              <span>Every payment to a supplier or from a customer, in one place with receipt numbers.</span>
+            </div>
+          </div>
+
+          <div class="extra-item">
+            <div class="extra-item__icon extra-item__icon--indigo">
+              <i class="fa-solid fa-building"></i>
+            </div>
+            <div class="extra-item__text">
+              <strong>Multiple Businesses</strong>
+              <span>Run more than one business from the same app and switch between them.</span>
+            </div>
+          </div>
+
+          <div class="extra-item">
+            <div class="extra-item__icon extra-item__icon--cyan">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+            <div class="extra-item__text">
+              <strong>Your Business Day</strong>
+              <span>Set your timezone so "today" means your day — not the server's.</span>
+            </div>
+          </div>
+
+          <div class="extra-item">
+            <div class="extra-item__icon extra-item__icon--violet">
+              <i class="fa-solid fa-clipboard-check"></i>
+            </div>
+            <div class="extra-item__text">
+              <strong>Approvals Queue</strong>
+              <span>Changes made by staff land in a queue for you to approve or reject.</span>
+            </div>
+          </div>
+
+          <div class="extra-item">
+            <div class="extra-item__icon extra-item__icon--slate">
+              <i class="fa-solid fa-mobile-screen"></i>
+            </div>
+            <div class="extra-item__text">
+              <strong>Device Management</strong>
+              <span>See which devices are signed in and cut off any one of them instantly.</span>
+            </div>
+          </div>
+
+          <div class="extra-item">
+            <div class="extra-item__icon extra-item__icon--red">
+              <i class="fa-solid fa-arrows-rotate"></i>
+            </div>
+            <div class="extra-item__text">
+              <strong>Built-In Updates</strong>
+              <span>The app tells you when a new version is out and updates itself.</span>
+            </div>
           </div>
 
         </div>
@@ -458,8 +731,9 @@
             </div>
             <div class="benefit-item__content">
               <h3>View Business Reports Quickly</h3>
-              <p>Understand how your business is performing without spending hours compiling data. Reports are
-                automatically generated and easy to read, giving you actionable business insights at a glance.</p>
+              <p>Understand how your business is performing without spending hours compiling data. The stock ledger and
+                stock report are built as you work, and any statement exports to PDF in a couple of taps — ready to
+                print, file or send to your accountant.</p>
             </div>
           </div>
 
@@ -471,6 +745,30 @@
               <h3>Reduce Manual Bookkeeping Confusion</h3>
               <p>Manual records are error-prone and hard to search. Virtual Manager keeps everything digital, organized,
                 and searchable — reducing mistakes and saving you time every single day.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-item__icon benefit-item__icon--slate">
+              <i class="fa-solid fa-user-shield"></i>
+            </div>
+            <div class="benefit-item__content">
+              <h3>Let Your Team Work Without Handing Over Control</h3>
+              <p>Give staff their own login by scanning a QR code or entering a one-time code — no email account
+                needed. Each person sees only the module you allow, salaries stay private, and the changes they make
+                can wait for your approval before they count.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-item__icon benefit-item__icon--red">
+              <i class="fa-solid fa-coins"></i>
+            </div>
+            <div class="benefit-item__content">
+              <h3>Know Your Real Profit, Not Just Your Sales</h3>
+              <p>A big sales number means nothing on its own. Every sale is costed against the actual stock batch it
+                came from, so the profit you see already accounts for what that stock cost you — with expenses and
+                salaries factored in too.</p>
             </div>
           </div>
 
@@ -561,8 +859,8 @@
           <span class="section-label section-label--light">Get Started Today</span>
           <h2 class="download__title">Download Virtual Manager</h2>
           <p class="download__subtitle">
-            Start managing your business smarter. Virtual Manager is available across all major platforms — pick the
-            build for your device and set up in minutes.
+            Start managing your business smarter. Virtual Manager is ready today on Windows and Android — macOS and iOS
+            builds are on the way. Pick your device and set up in minutes.
           </p>
           <div class="download__actions download__actions--grid">
             <a href="https://hfeexvvtlkptlewexgzc.supabase.co/storage/v1/object/public/releases/latest-windows-installer.zip"
@@ -581,12 +879,11 @@
                 <small>APK · Android 7+</small>
               </span>
             </a>
-            <a href="https://hfeexvvtlkptlewexgzc.supabase.co/storage/v1/object/public/releases/latest.dmg"
-              class="btn btn--white download__btn" rel="noopener">
+            <a href="#faq" class="btn btn--white download__btn">
               <i class="fa-brands fa-apple" aria-hidden="true"></i>
               <span>
                 <strong>macOS</strong>
-                <small>DMG · macOS 11+</small>
+                <small>Coming soon</small>
               </span>
             </a>
             <a href="#faq" class="btn btn--white download__btn">
@@ -610,23 +907,23 @@
           </div>
           <div class="download__feature">
             <i class="fa-solid fa-check-circle"></i>
-            <span>No technical setup required</span>
+            <span>No account needed to start</span>
           </div>
           <div class="download__feature">
             <i class="fa-solid fa-check-circle"></i>
-            <span>Works offline immediately</span>
+            <span>Works fully offline</span>
           </div>
           <div class="download__feature">
             <i class="fa-solid fa-check-circle"></i>
-            <span>Secure local data storage</span>
+            <span>Staff logins with permissions</span>
           </div>
           <div class="download__feature">
             <i class="fa-solid fa-check-circle"></i>
-            <span>Cloud sync available</span>
+            <span>Encrypted on-device storage</span>
           </div>
           <div class="download__feature">
             <i class="fa-solid fa-check-circle"></i>
-            <span>Update notifications built in</span>
+            <span>Cloud sync across devices</span>
           </div>
         </div>
       </div>
@@ -649,9 +946,10 @@
               <i class="fa-solid fa-chevron-down faq-item__icon" aria-hidden="true"></i>
             </button>
             <div class="faq-item__answer" id="faq-a-1" role="region" aria-labelledby="faq-q-1">
-              <p>Virtual Manager is a business operations app designed for small shops, traders, and retail businesses.
-                It lets you manage sales, purchases, inventory, expenses, and reports from one simple and organized
-                system. The app is built to make day-to-day business record keeping easier, faster, and more reliable —
+              <p>Virtual Manager is an offline-first business app for small shops, traders and factories. It handles
+                sales, purchases, batch-tracked inventory, expenses, payments, employee attendance and payroll from one
+                organized system, and shows you real profit after stock cost. Your team can get their own logins with
+                limited access. It works with no internet and no account, and syncs to the cloud when you connect —
                 without requiring any accounting expertise.</p>
             </div>
           </div>
@@ -675,9 +973,10 @@
               <i class="fa-solid fa-chevron-down faq-item__icon" aria-hidden="true"></i>
             </button>
             <div class="faq-item__answer" id="faq-a-3" role="region" aria-labelledby="faq-q-3">
-              <p>Yes. Virtual Manager stores your data locally on your device, which means the app works fully without
-                an internet connection. You can record sales, purchases, expenses, and manage items even when you are
-                offline. Your data is always available, regardless of connectivity.</p>
+              <p>Yes — completely. The full app runs on your device with no signup, no login and no internet
+                connection at all. Sales, purchases, expenses, inventory, attendance and payroll all work offline, and
+                so do PDF exports and receipts. Cloud sync is optional: connect whenever you want and everything you
+                recorded offline uploads then. Nothing you enter while offline is lost.</p>
             </div>
           </div>
 
@@ -687,9 +986,9 @@
               <i class="fa-solid fa-chevron-down faq-item__icon" aria-hidden="true"></i>
             </button>
             <div class="faq-item__answer" id="faq-a-4" role="region" aria-labelledby="faq-q-4">
-              <p>Yes. The app includes cloud sync support so your business data can be backed up and kept available
-                across sessions. This helps ensure your records are not lost and can be restored if needed. Local
-                storage and cloud sync work together to give you reliable access to your business data at all times.</p>
+              <p>Yes. Sign in and your records back up to the cloud and sync across every device you use. Work you do
+                while offline is queued safely and uploads the moment you reconnect. If you started out offline without
+                an account, you can create one later and bring all your existing data with you.</p>
             </div>
           </div>
 
@@ -699,10 +998,80 @@
               <i class="fa-solid fa-chevron-down faq-item__icon" aria-hidden="true"></i>
             </button>
             <div class="faq-item__answer" id="faq-a-5" role="region" aria-labelledby="faq-q-5">
-              <p>You can manage the following in Virtual Manager: Sales records and customer transaction entries,
-                Purchase records from suppliers, Inventory and item lists with product details, Business expenses,
-                Reports covering sales and purchase activity, and Recent transaction history. Everything is organized in
-                one system so you always have a clear view of your business operations.</p>
+              <p>Virtual Manager covers six modules: Purchases (suppliers, purchase entries and payments), Sales
+                (wholesale and retail customers, sales and customer payments), Inventory (items, stock batches and
+                adjustments), Expenses, Employees (attendance, monthly salary and payments) and the Ledger (every stock
+                movement plus a stock report). On top of that you get payment history across all parties, PDF
+                statements, and a live overview of profit for any date range. Everything sits in one system so you
+                always have a clear view of your business.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false" aria-controls="faq-a-12" id="faq-q-12">
+              <span>Can my staff use the app without seeing everything?</span>
+              <i class="fa-solid fa-chevron-down faq-item__icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-item__answer" id="faq-a-12" role="region" aria-labelledby="faq-q-12">
+              <p>Yes. You can create access for a staff member and hand it to them as a QR code to scan or a one-time
+                code to type — they don't need an email account of their own. Each person gets a role, and you can
+                grant or deny individual permissions on top of it, so a salesman sees only sales and a storekeeper only
+                inventory. Salary figures can be hidden from everyone but you. You can also require that edits and
+                deletions made by staff come to you for approval before they take effect, and revoke anyone's access at
+                any time.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false" aria-controls="faq-a-13" id="faq-q-13">
+              <span>Can I track employee attendance and salaries?</span>
+              <i class="fa-solid fa-chevron-down faq-item__icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-item__answer" id="faq-a-13" role="region" aria-labelledby="faq-q-13">
+              <p>Yes. Add your employees with their monthly salary and joining date, then mark each day as present,
+                absent, half day or leave. At the end of the month you close the salary period and the app works out
+                what each person is owed from the days they actually worked. You can pay in full or in parts, and every
+                payment is tracked as pending, partially paid or paid.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false" aria-controls="faq-a-14" id="faq-q-14">
+              <span>Can I import my existing records from Excel?</span>
+              <i class="fa-solid fa-chevron-down faq-item__icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-item__answer" id="faq-a-14" role="region" aria-labelledby="faq-q-14">
+              <p>Yes. The built-in data importer reads an Excel (.xlsx) workbook and brings in purchases, sales, items,
+                expenses, salaries, customers or suppliers. Pick the sheet and header row, and the app maps your
+                columns for you — you can correct any it gets wrong. It also spots the same person or item spelled
+                differently and offers to merge them. Nothing is saved until you check the preview and confirm.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false" aria-controls="faq-a-15" id="faq-q-15">
+              <span>Can I export or print my records?</span>
+              <i class="fa-solid fa-chevron-down faq-item__icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-item__answer" id="faq-a-15" role="region" aria-labelledby="faq-q-15">
+              <p>Yes. You can export a purchase statement, a sale statement, the stock ledger or the stock report as a
+                PDF — for all records, a single month, or any date range you choose — and preview it before you save,
+                print or share it. Individual receipts can be shared straight from the app, and you can print an out
+                pass with the driver's name and vehicle number for goods leaving your premises.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false" aria-controls="faq-a-16" id="faq-q-16">
+              <span>Does the app support Urdu?</span>
+              <i class="fa-solid fa-chevron-down faq-item__icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-item__answer" id="faq-a-16" role="region" aria-labelledby="faq-q-16">
+              <p>You can type Urdu anywhere in the app — customer names, item names, notes — and it displays in proper
+                Nastaliq script while your English text keeps its own font. Urdu also renders correctly on printed
+                receipts and PDF exports. You can choose between Jameel Noori Nastaleeq and Noto Nastaliq Urdu in
+                settings. Note that the app's own menus and buttons are in English; it's your data that can be in
+                Urdu.</p>
             </div>
           </div>
 
@@ -712,9 +1081,10 @@
               <i class="fa-solid fa-chevron-down faq-item__icon" aria-hidden="true"></i>
             </button>
             <div class="faq-item__answer" id="faq-a-6" role="region" aria-labelledby="faq-q-6">
-              <p>Click the "Download App" button on this page to download the latest installer. Once the download is
-                complete, run the installer file and follow the setup steps. The app will be ready to use in a few
-                minutes. No technical knowledge is required to get started.</p>
+              <p>Pick your platform in the download section above. On Windows you'll get an installer — unzip it and
+                run the setup. On Android you'll get an APK file; open it and allow installation from your browser when
+                your phone asks. Either way the app is ready in a few minutes, and you can start using it straight away
+                without creating an account.</p>
             </div>
           </div>
 
@@ -725,7 +1095,8 @@
             </button>
             <div class="faq-item__answer" id="faq-a-7" role="region" aria-labelledby="faq-q-7">
               <p>Yes. Virtual Manager is free to download and use. The core features — sales, purchases, inventory,
-                expenses, reports, and offline access — are available at no cost and with no subscription required.
+                expenses, employees and payroll, the stock ledger, PDF exports and offline access — are available at no
+                cost and with no subscription required.
               </p>
             </div>
           </div>
@@ -748,8 +1119,11 @@
               <i class="fa-solid fa-chevron-down faq-item__icon" aria-hidden="true"></i>
             </button>
             <div class="faq-item__answer" id="faq-a-9" role="region" aria-labelledby="faq-q-9">
-              <p>Yes. Sign in with the same account on each device and enable cloud sync — your sales, purchases and
-                inventory will stay in sync between your phone, your laptop, and your shop computer.</p>
+              <p>Yes. Sign in with the same account on each device and your sales, purchases, inventory and payroll
+                stay in sync between your phone, your laptop and your shop computer. One detail worth knowing: staff
+                accounts are limited to one device at a time for entering data. If a staff member signs in somewhere
+                new, their old device switches to view-only and anything it had not yet synced is kept safe rather than
+                discarded. As the owner you are not restricted this way.</p>
             </div>
           </div>
 
@@ -766,13 +1140,13 @@
 
           <div class="faq-item">
             <button class="faq-item__question" aria-expanded="false" aria-controls="faq-a-11" id="faq-q-11">
-              <span>When will the iOS version be available?</span>
+              <span>When will the iOS and macOS versions be available?</span>
               <i class="fa-solid fa-chevron-down faq-item__icon" aria-hidden="true"></i>
             </button>
             <div class="faq-item__answer" id="faq-a-11" role="region" aria-labelledby="faq-q-11">
-              <p>The iOS version is in active development and will be released through the App Store. Until then,
-                you can use Virtual Manager on Android, Windows, or macOS. Email us if you'd like to be notified at
-                launch.</p>
+              <p>Both are in active development — the iOS build will be released through the App Store, and a macOS
+                build will follow. Until then you can use Virtual Manager on Android and Windows, and your data syncs
+                between them. Email us if you'd like to be notified at launch.</p>
             </div>
           </div>
 
@@ -826,8 +1200,36 @@
     </div>
   </footer>
 
+  <!-- ===== DOWNLOAD CODE GATE MODAL ===== -->
+  <div class="code-gate" id="codeGate" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="codeGateTitle">
+    <div class="code-gate__backdrop" data-gate-close></div>
+    <div class="code-gate__card" role="document">
+      <button class="code-gate__close" id="codeGateClose" type="button" aria-label="Close" data-gate-close>
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+      <i class="fa-solid fa-lock code-gate__icon" aria-hidden="true"></i>
+      <h3 class="code-gate__title" id="codeGateTitle">Enter Code to Download</h3>
+      <p class="code-gate__subtitle">Enter your access code to start the download.</p>
+      <form class="code-gate__form" id="codeGateForm" novalidate>
+        <input type="text" class="code-gate__input" id="codeGateInput"
+          placeholder="Enter code" autocomplete="off" autocapitalize="off"
+          spellcheck="false" aria-label="Download code" />
+        <p class="code-gate__error" id="codeGateError" role="alert" hidden>Incorrect code. Try again.</p>
+        <button type="submit" class="btn btn--primary code-gate__submit">
+          <i class="fa-solid fa-download" aria-hidden="true"></i> Download
+        </button>
+      </form>
+      <div class="code-gate__divider"><span>or</span></div>
+      <a class="code-gate__whatsapp"
+        href="https://wa.me/923157401330?text=Hi%2C%20I%27d%20like%20the%20download%20code%20for%20Virtual%20Manager."
+        target="_blank" rel="noopener">
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Get Code on WhatsApp
+      </a>
+    </div>
+  </div>
+
   <!-- JavaScript -->
-  <script src="js/main.js?v=2"></script>
+  <script src="js/main.js?v=4"></script>
 </body>
 
 </html>

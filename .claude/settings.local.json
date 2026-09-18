@@ -5,7 +5,15 @@
       "PowerShell(node --version 2>&1)",
       "PowerShell(firebase --version 2>&1)",
       "PowerShell(python -m http.server 8080)",
-      "PowerShell(Invoke-WebRequest -Uri \"http://localhost:8080\" -UseBasicParsing -Method Head)"
+      "PowerShell(Invoke-WebRequest -Uri \"http://localhost:8080\" -UseBasicParsing -Method Head)",
+      "Bash(python -m http.server 8080)",
+      "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://localhost:8080\" -UseBasicParsing -TimeoutSec 5; \"STATUS: $\\($r.StatusCode\\)\"; \"TITLE_PRESENT: $\\($r.Content -match '<title>'\\)\" } catch { \"REQUEST FAILED: $\\($_.Exception.Message\\)\" })",
+      "PowerShell(Get-NetTCPConnection -LocalPort 8080 -ErrorAction SilentlyContinue | Select-Object -Expand OwningProcess -Unique | ForEach-Object { Stop-Process -Id $_ -Force }; Start-Sleep -Milliseconds 400; $still = Get-NetTCPConnection -LocalPort 8080 -ErrorAction SilentlyContinue; if \\($still\\) { \"PORT STILL IN USE\" } else { \"PORT 8080 FREE\" })",
+      "PowerShell(Get-NetTCPConnection -LocalPort 8080 -ErrorAction SilentlyContinue)",
+      "PowerShell(Get-Process python -ErrorAction SilentlyContinue)",
+      "PowerShell(\"--- python processes ---\")",
+      "Bash(node --check js/main.js)",
+      "Bash(node -e \"try{require.resolve\\('playwright'\\);console.log\\('playwright AVAILABLE'\\)}catch\\(e\\){try{require.resolve\\('puppeteer'\\);console.log\\('puppeteer AVAILABLE'\\)}catch\\(e2\\){console.log\\('NO_BROWSER_DRIVER'\\)}}\")"
     ]
   }
 }
