@@ -1,21 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://virtual-manager-website.web.app/</loc>
-    <lastmod>2026-09-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://virtual-manager-website.web.app/privacy.html</loc>
-    <lastmod>2026-09-18</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://virtual-manager-website.web.app/terms.html</loc>
-    <lastmod>2026-09-18</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
+  <url><loc>https://virtualmanager.online/</loc></url>
+  <url><loc>https://virtualmanager.online/offline-inventory-software.html</loc></url>
+  <url><loc>https://virtualmanager.online/sales-purchase-record-app.html</loc></url>
+  <url><loc>https://virtualmanager.online/excel-data-import.html</loc></url>
+  <url><loc>https://virtualmanager.online/employee-attendance-payroll.html</loc></url>
+  <url><loc>https://virtualmanager.online/whats-new.html</loc></url>
+  <url><loc>https://virtualmanager.online/privacy.html</loc></url>
+  <url><loc>https://virtualmanager.online/terms.html</loc></url>
 </urlset>

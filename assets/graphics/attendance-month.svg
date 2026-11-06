@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 380" role="img" aria-labelledby="t d" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif">
+  <title id="t">Monthly attendance and pay at a glance</title>
+  <desc id="d">A sample month calendar marks 23 days present, 4 weekly days off, 1 holiday, 1 leave and 1 absence. A pay summary shows a salary of Rs 30,000, an advance of Rs 5,000 and Rs 25,000 left to pay. Sample figures only.</desc>
+  <rect x="12" y="12" width="376" height="356" rx="16" fill="#fff" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="36" y="48" font-size="17" font-weight="800" fill="#1E293B">Attendance · sample month</text>
+  <g font-size="11" font-weight="700" fill="#64748B" text-anchor="middle">
+    <text x="60" y="78">M</text><text x="108" y="78">T</text><text x="156" y="78">W</text><text x="204" y="78">T</text><text x="252" y="78">F</text><text x="300" y="78">S</text><text x="348" y="78">S</text>
+  </g>
+  <!-- cells: x = 40 + col*48, y = 90 + row*52 ; size 40 -->
+  <g id="cells" font-size="12" font-weight="700" text-anchor="middle">
+    <!-- row 1: 1-7 -->
+    <rect x="40" y="90" width="40" height="40" rx="8" fill="#DCFCE7"/><text x="60" y="115" fill="#166534">1</text>
+    <rect x="88" y="90" width="40" height="40" rx="8" fill="#DCFCE7"/><text x="108" y="115" fill="#166534">2</text>
+    <rect x="136" y="90" width="40" height="40" rx="8" fill="#DCFCE7"/><text x="156" y="115" fill="#166534">3</text>
+    <rect x="184" y="90" width="40" height="40" rx="8" fill="#DCFCE7"/><text x="204" y="115" fill="#166534">4</text>
+    <rect x="232" y="90" width="40" height="40" rx="8" fill="#DCFCE7"/><text x="252" y="115" fill="#166534">5</text>
+    <rect x="280" y="90" width="40" height="40" rx="8" fill="#DCFCE7"/><text x="300" y="115" fill="#166534">6</text>
+    <rect x="328" y="90" width="40" height="40" rx="8" fill="#F1F5F9"/><text x="348" y="115" fill="#94A3B8">7</text>
+    <!-- row 2: 8-14 (12 leave) -->
+    <rect x="40" y="142" width="40" height="40" rx="8" fill="#DCFCE7"/><text x="60" y="167" fill="#166534">8</text>
+    <rect x="88" y="142" width="40" height="40" rx="8" fill="#DCFCE7"/><text x="108" y="167" fill="#166534">9</text>
+    <rect x="136" y="142" width="40" height="40" rx="8" fill="#DCFCE7"/><text x="156" y="167" fill="#166534">10</text>
+    <rect x="184" y="142" width="40" height="40" rx="8" fill="#DCFCE7"/><text x="204" y="167" fill="#166534">11</text>
+    <rect x="232" y="142" width="40" height="40" rx="8" fill="#FFEDD5"/><text x="252" y="167" fill="#9A3412">12</text>
+    <rect x="280" y="142" width="40" height="40" rx="8" fill="#DCFCE7"/><text x="300" y="167" fill="#166534">13</text>
+    <rect x="328" y="142" width="40" height="40" rx="8" fill="#F1F5F9"/><text x="348" y="167" fill="#94A3B8">14</text>
+    <!-- row 3: 15-21 (19 absent) -->
+    <rect x="40" y="194" width="40" height="40" rx="8" fill="#DCFCE7"/><text x="60" y="219" fill="#166534">15</text>
+    <rect x="88" y="194" width="40" height="40" rx="8" fill="#DCFCE7"/><text x="108" y="219" fill="#166534">16</text>
+    <rect x="136" y="194" width="40" height="40" rx="8" fill="#DCFCE7"/><text x="156" y="219" fill="#166534">17</text>
+    <rect x="184" y="194" width="40" height="40" rx="8" fill="#DCFCE7"/><text x="204" y="219" fill="#166534">18</text>
+    <rect x="232" y="194" width="40" height="40" rx="8" fill="#FEE2E2"/><text x="252" y="219" fill="#991B1B">19</text>
+    <rect x="280" y="194" width="40" height="40" rx="8" fill="#DCFCE7"/><text x="300" y="219" fill="#166534">20</text>
+    <rect x="328" y="194" width="40" height="40" rx="8" fill="#F1F5F9"/><text x="348" y="219" fill="#94A3B8">21</text>
+    <!-- row 4: 22-28 (24 holiday) -->
+    <rect x="40" y="246" width="40" height="40" rx="8" fill="#DCFCE7"/><text x="60" y="271" fill="#166534">22</text>
+    <rect x="88" y="246" width="40" height="40" rx="8" fill="#DCFCE7"/><text x="108" y="271" fill="#166534">23</text>
+    <rect x="136" y="246" width="40" height="40" rx="8" fill="#DBEAFE"/><text x="156" y="271" fill="#1E40AF">24</text>
+    <rect x="184" y="246" width="40" height="40" rx="8" fill="#DCFCE7"/><text x="204" y="271" fill="#166534">25</text>
+    <rect x="232" y="246" width="40" height="40" rx="8" fill="#DCFCE7"/><text x="252" y="271" fill="#166534">26</text>
+    <rect x="280" y="246" width="40" height="40" rx="8" fill="#DCFCE7"/><text x="300" y="271" fill="#166534">27</text>
+    <rect x="328" y="246" width="40" height="40" rx="8" fill="#F1F5F9"/><text x="348" y="271" fill="#94A3B8">28</text>
+    <!-- row 5: 29-30 -->
+    <rect x="40" y="298" width="40" height="40" rx="8" fill="#DCFCE7"/><text x="60" y="323" fill="#166534">29</text>
+    <rect x="88" y="298" width="40" height="40" rx="8" fill="#DCFCE7"/><text x="108" y="323" fill="#166534">30</text>
+  </g>
+
+  <!-- Summary panel -->
+  <rect x="408" y="12" width="220" height="356" rx="16" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="430" y="48" font-size="15" font-weight="800" fill="#1E293B">This month</text>
+  <g font-size="13" fill="#334155">
+    <rect x="430" y="66" width="14" height="14" rx="4" fill="#86EFAC"/><text x="452" y="78">Present</text><text x="606" y="78" text-anchor="end" font-weight="700">23</text>
+    <rect x="430" y="92" width="14" height="14" rx="4" fill="#CBD5E1"/><text x="452" y="104">Weekly day off</text><text x="606" y="104" text-anchor="end" font-weight="700">4</text>
+    <rect x="430" y="118" width="14" height="14" rx="4" fill="#93C5FD"/><text x="452" y="130">Holiday</text><text x="606" y="130" text-anchor="end" font-weight="700">1</text>
+    <rect x="430" y="144" width="14" height="14" rx="4" fill="#FDBA74"/><text x="452" y="156">Leave</text><text x="606" y="156" text-anchor="end" font-weight="700">1</text>
+    <rect x="430" y="170" width="14" height="14" rx="4" fill="#FCA5A5"/><text x="452" y="182">Absent</text><text x="606" y="182" text-anchor="end" font-weight="700">1</text>
+  </g>
+  <rect x="424" y="204" width="188" height="148" rx="12" fill="#fff" stroke="#E2E8F0"/>
+  <g font-size="13" fill="#475569">
+    <text x="440" y="232">Salary</text><text x="598" y="232" text-anchor="end" fill="#1E293B" font-weight="700">Rs 30,000</text>
+    <text x="440" y="260">Advance paid</text><text x="598" y="260" text-anchor="end" fill="#DC2626" font-weight="700">− Rs 5,000</text>
+  </g>
+  <path d="M440 276 H598" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="440" y="302" font-size="12" font-weight="700" letter-spacing="1" fill="#16A34A">LEFT TO PAY</text>
+  <text x="440" y="334" font-size="24" font-weight="800" fill="#14532D">Rs 25,000</text>
+</svg>

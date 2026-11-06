@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300" role="img" aria-labelledby="t d" font-family="Inter, 'Segoe UI', Roboto, Arial, sans-serif">
+  <title id="t">Tracking a customer's credit balance</title>
+  <desc id="d">A customer buys goods worth Rs 5,000 and pays Rs 2,000, leaving Rs 3,000 owed. A later payment of Rs 1,000 brings the balance down to Rs 2,000. Sample figures only.</desc>
+
+  <!-- Customer header -->
+  <circle cx="44" cy="44" r="24" fill="#DBEAFE"/>
+  <text x="44" y="50" font-size="15" font-weight="800" fill="#1D4ED8" text-anchor="middle">AT</text>
+  <text x="80" y="40" font-size="17" font-weight="800" fill="#1E293B">Ali Traders</text>
+  <text x="80" y="60" font-size="12" fill="#64748B">Wholesale customer · sample account</text>
+  <rect x="506" y="24" width="174" height="40" rx="20" fill="#FFF7ED" stroke="#FDBA74"/>
+  <text x="593" y="49" font-size="14" font-weight="700" fill="#C2410C" text-anchor="middle">Balance Rs 2,000</text>
+
+  <!-- Timeline -->
+  <path d="M120 104 H580" stroke="#CBD5E1" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="120" cy="104" r="11" fill="#2563EB"/>
+  <circle cx="350" cy="104" r="11" fill="#16A34A"/>
+  <circle cx="580" cy="104" r="11" fill="#EA580C"/>
+
+  <g fill="#fff" stroke="#E2E8F0" stroke-width="2">
+    <rect x="20" y="128" width="200" height="156" rx="14"/>
+    <rect x="250" y="128" width="200" height="156" rx="14"/>
+    <rect x="480" y="128" width="200" height="156" rx="14"/>
+  </g>
+
+  <!-- Card 1 -->
+  <text x="40" y="156" font-size="11" font-weight="700" letter-spacing="1" fill="#2563EB">3 NOV · CREDIT SALE</text>
+  <text x="40" y="186" font-size="20" font-weight="800" fill="#1E293B">Rs 5,000</text>
+  <text x="40" y="208" font-size="13" fill="#475569">Paid now: Rs 2,000</text>
+  <rect x="40" y="226" width="160" height="10" rx="5" fill="#F1F5F9"/>
+  <rect x="40" y="226" width="96" height="10" rx="5" fill="#FB923C"/>
+  <text x="40" y="262" font-size="13" font-weight="700" fill="#C2410C">Still owed Rs 3,000</text>
+
+  <!-- Card 2 -->
+  <text x="270" y="156" font-size="11" font-weight="700" letter-spacing="1" fill="#16A34A">10 NOV · PAYMENT</text>
+  <text x="270" y="186" font-size="20" font-weight="800" fill="#1E293B">+ Rs 1,000</text>
+  <text x="270" y="208" font-size="13" fill="#475569">Cash received</text>
+  <rect x="270" y="226" width="160" height="10" rx="5" fill="#F1F5F9"/>
+  <rect x="270" y="226" width="64" height="10" rx="5" fill="#FB923C"/>
+  <text x="270" y="262" font-size="13" font-weight="700" fill="#C2410C">Still owed Rs 2,000</text>
+
+  <!-- Card 3 -->
+  <text x="500" y="156" font-size="11" font-weight="700" letter-spacing="1" fill="#EA580C">TODAY</text>
+  <text x="500" y="186" font-size="20" font-weight="800" fill="#1E293B">Rs 2,000 due</text>
+  <text x="500" y="208" font-size="13" fill="#475569">Share a PDF statement</text>
+  <rect x="500" y="224" width="160" height="40" rx="10" fill="#EFF6FF"/>
+  <path d="M516 236 h12 l6 6 v14 h-18 z" fill="#fff" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="544" y="249" font-size="12" font-weight="700" fill="#1D4ED8">Statement.pdf</text>
+</svg>

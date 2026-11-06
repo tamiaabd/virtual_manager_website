@@ -329,11 +329,79 @@
     }, observerOptions);
 
     document.querySelectorAll(
-      '.feature-card, .extra-item, .benefit-item, .about__badge, .screenshot-frame, .download__feature'
+      '.feature-card, .extra-item, .benefit-item, .about__badge, .screenshot-frame, .download__feature, ' +
+      '.industry-card, .step, .spotlight__row, .proof-item, .guide-links a'
     ).forEach(function (el) {
       el.classList.add('animate-on-scroll');
       observer.observe(el);
     });
   }
+
+  /* ---- Hero Lottie animation (same animation as the app's home screen) ----
+     The static poster is the first frame, so swapping to the player is seamless.
+     The player loads after the page, never for reduced-motion users, and pauses
+     while the hero is off-screen or the tab is hidden. */
+  (function () {
+    var card = document.getElementById('heroAnim');
+    var player = document.getElementById('heroAnimPlayer');
+    if (!card || !player) return;
+
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion) return;
+
+    var anim = null;
+    var inView = true;
+
+    function sync() {
+      if (!anim) return;
+      if (inView && !document.hidden) {
+        anim.play();
+      } else {
+        anim.pause();
+      }
+    }
+
+    function start() {
+      if (!window.lottie) return;
+      anim = window.lottie.loadAnimation({
+        container: player,
+        renderer: 'svg',
+        loop: true,
+        autoplay: false,
+        path: player.getAttribute('data-src'),
+        rendererSettings: { preserveAspectRatio: 'xMidYMid meet' }
+      });
+      anim.addEventListener('DOMLoaded', function () {
+        card.classList.add('is-playing');
+        sync();
+      });
+      anim.addEventListener('data_failed', function () {
+        anim.destroy();
+        anim = null;
+      });
+
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function (entries) {
+          inView = entries[0].isIntersecting;
+          sync();
+        }, { threshold: 0.05 }).observe(card);
+      }
+      document.addEventListener('visibilitychange', sync);
+    }
+
+    function loadPlayer() {
+      var script = document.createElement('script');
+      script.src = 'js/vendor/lottie_light.min.js?v=5.12.2';
+      script.async = true;
+      script.onload = start;
+      document.head.appendChild(script);
+    }
+
+    if (document.readyState === 'complete') {
+      loadPlayer();
+    } else {
+      window.addEventListener('load', loadPlayer, { once: true });
+    }
+  })();
 
 })();
