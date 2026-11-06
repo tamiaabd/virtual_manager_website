@@ -3118,3 +3118,22 @@ section.video {
   .hero-anim { padding: 10px 12px 14px; }
   .hero-anim__bar { padding-bottom: 8px; margin-bottom: 10px; font-size: 0.75rem; }
 }
+
+/* ---- About: smaller "After" tag; bottom placement on phones (v10) ---- */
+.photo-tag--green {
+  gap: 5px;
+  padding: 4.5px 10.8px;
+  font-size: 0.675rem;
+}
+@media (max-width: 768px) {
+  .about__photo--inset { width: 62%; }
+  .about__photo--inset .photo-tag {
+    top: auto;
+    bottom: 8px;
+    left: 8px;
+    white-space: nowrap;
+  }
+}
+@media (max-width: 480px) {
+  .about__photo--inset .photo-tag { padding: 4px 9px; font-size: 0.625rem; }
+}
