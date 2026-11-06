@@ -6,21 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#2563EB" />
 
-  <title>Offline Business Management Software | Virtual Manager</title>
-  <meta name="description" content="Manage sales, purchases, inventory and payroll offline. Virtual Manager serves wholesalers, retailers and factories on Windows and Android." />
+  <title>Free Offline Khata, POS &amp; Inventory App | Virtual Manager</title>
+  <meta name="description" content="Free khata, POS billing and inventory app for Windows and Android. Record sales, udhar, purchases, stock and payroll offline, in English or Urdu." />
   <link rel="canonical" href="https://virtualmanager.online/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Virtual Manager" />
   <meta property="og:url" content="https://virtualmanager.online/" />
-  <meta property="og:title" content="Offline Business Management Software | Virtual Manager" />
-  <meta property="og:description" content="Manage sales, purchases, inventory and payroll offline. Virtual Manager serves wholesalers, retailers and factories on Windows and Android." />
+  <meta property="og:title" content="Free Offline Khata, POS &amp; Inventory App | Virtual Manager" />
+  <meta property="og:description" content="Free khata, POS billing and inventory app for Windows and Android. Record sales, udhar, purchases, stock and payroll offline, in English or Urdu." />
   <meta property="og:image" content="https://virtualmanager.online/assets/og-image.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Virtual Manager Live Overview showing sales, stock cost, expenses and profit" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Offline Business Management Software | Virtual Manager" />
-  <meta name="twitter:description" content="Manage sales, purchases, inventory and payroll offline. Virtual Manager serves wholesalers, retailers and factories on Windows and Android." />
+  <meta name="twitter:title" content="Free Offline Khata, POS &amp; Inventory App | Virtual Manager" />
+  <meta name="twitter:description" content="Free khata, POS billing and inventory app for Windows and Android. Record sales, udhar, purchases, stock and payroll offline, in English or Urdu." />
   <meta name="twitter:image" content="https://virtualmanager.online/assets/og-image.jpg" />
 
   <!-- Google Fonts (only weights actually used) -->
@@ -47,11 +47,36 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "Organization",
+      "@id": "https://virtualmanager.online/#organization",
+      "name": "Virtual Manager",
+      "url": "https://virtualmanager.online/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://virtualmanager.online/assets/icon-512.png",
+        "width": 512,
+        "height": 512
+      },
+      "email": "support@virtual-manager.app",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "support@virtual-manager.app"
+      },
+      "sameAs": [
+        "https://apps.microsoft.com/detail/9P398S93XZ42",
+        "https://play.google.com/store/apps/details?id=virtual_manager.app"
+      ]
+    },
+    {
       "@type": "WebSite",
       "@id": "https://virtualmanager.online/#website",
       "url": "https://virtualmanager.online/",
       "name": "Virtual Manager",
-      "inLanguage": "en"
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://virtualmanager.online/#organization"
+      }
     },
     {
       "@type": "SoftwareApplication",
@@ -59,7 +84,7 @@
       "name": "Virtual Manager",
       "url": "https://virtualmanager.online/",
       "image": "https://virtualmanager.online/assets/og-image.jpg",
-      "description": "Manage sales, purchases, inventory and payroll offline. Virtual Manager serves wholesalers, retailers and factories on Windows and Android.",
+      "description": "Free khata, POS billing and inventory app for Windows and Android. Record sales, udhar, purchases, stock and payroll offline, in English or Urdu.",
       "screenshot": "https://virtualmanager.online/assets/img/live-overview-desktop.webp",
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Windows, Android",
@@ -75,12 +100,160 @@
         "url": "https://virtualmanager.online/#download"
       },
       "featureList": [
+        "Digital khata with customer and supplier balances",
+        "Quick Sell counter billing with English and Urdu receipts",
         "Offline sales, purchases and customer balances without an account",
         "Batch-tracked FIFO inventory and stock reports",
         "Employee attendance and payroll",
         "Excel workbook import",
         "PDF statements and receipts",
         "Optional cloud sync and staff permissions"
+      ],
+      "publisher": {
+        "@id": "https://virtualmanager.online/#organization"
+      },
+      "applicationSubCategory": "Point of sale, inventory and bookkeeping"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://virtualmanager.online/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Virtual Manager?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Virtual Manager is an offline-first business app for wholesale businesses, retailers and factories. It handles sales, purchases, batch-tracked inventory, expenses, payments, employee attendance and payroll from one organized system, and shows you real profit after stock cost. Your team can get their own logins with limited access. It works with no internet and no account, and syncs to the cloud when you connect — without requiring any accounting expertise."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is this app for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wholesalers can track customer credit and supplier purchases. Retailers can record counter sales and stock. Factory teams can track supplier purchases, stock movements, expenses and employee pay. Each business can start with the records it already keeps in notebooks or spreadsheets."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use it offline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — completely. The full app runs on your device with no signup, no login and no internet connection at all. Sales, purchases, expenses, inventory, attendance and payroll all work offline, and so do PDF exports and receipts. Cloud sync is optional and requires internet and sign-in. Without sync, your records stay on that device."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it support cloud sync?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Turn on cloud sync and sign in to sync your business records across supported devices. If you started with local records, you can bring them into a cloud workspace later."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What business records can I manage in the app?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Virtual Manager covers six modules: Purchases (suppliers, purchase entries and payments), Sales (wholesale and retail customers, sales and customer payments), Inventory (items, stock batches and adjustments), Expenses, Employees (attendance, monthly salary and payments) and the Ledger (every stock movement plus a stock report). On top of that you get payment history across all parties, PDF statements, and a live overview of profit for any date range. Everything sits in one system so you always have a clear view of your business."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can my staff use the app without seeing everything?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can create access for a staff member and hand it to them as a QR code to scan or a one-time code to type — they don't need an email account of their own. Each person gets a role, and you can grant or deny individual permissions on top of it, so a salesman sees only sales and a storekeeper only inventory. Salary figures can be hidden from everyone but you. You can also require that edits and deletions made by staff come to you for approval before they take effect, and revoke anyone's access at any time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I track employee attendance and salaries?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Add employees, record attendance and track what you have paid. The Store listing also includes advances, bonuses and deductions. Check the attendance and payroll guide for a daily workflow and version notes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I import my existing records from Excel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The built-in data importer reads an Excel (.xlsx) workbook and brings in purchases, sales, items, expenses, salaries, customers or suppliers. Pick the sheet and header row, and the app maps your columns for you — you can correct any it gets wrong. It also spots the same person or item spelled differently and offers to merge them. Nothing is saved until you check the preview and confirm."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I export or print my records?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can export a purchase statement, a sale statement, the stock ledger or the stock report as a PDF — for all records, a single month, or any date range you choose — and preview it before you save, print or share it. Individual receipts can be shared straight from the app, and you can print an out pass with the driver's name and vehicle number for goods leaving your premises."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the app support Urdu?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can type Urdu anywhere in the app — customer names, item names, notes — and it displays in proper Nastaliq script while your English text keeps its own font. Urdu also renders correctly on printed receipts and PDF exports. You can choose between Jameel Noori Nastaleeq and Noto Nastaliq Urdu in settings. Note that the app's own menus and buttons are in English; it's your data that can be in Urdu."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use Virtual Manager as a khata app or POS software?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Credit sales and payments build a customer khata with running balances, and retail mode has Quick Sell for fast counter billing with receipts in English and Urdu. Read the khata app guide or the POS software guide to see how each works."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I download and install the app?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On Windows, install it from the Microsoft Store. On Android, install it from Google Play. After installation, choose Use Offline App to start without signing in."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Virtual Manager free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Virtual Manager is free to download and use. The core features — sales, purchases, inventory, expenses, employees and payroll, the stock ledger, PDF exports and offline access — are available at no cost and with no subscription required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is my business data stored and who owns it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Standalone records are stored on your device. Cloud storage applies if you enable cloud sync. Read the privacy policy for details about storage and account data."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use Virtual Manager on more than one device?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Sign in with the same account on each device and your sales, purchases, inventory and payroll stay in sync between your phone, your laptop and your shop computer. One detail worth knowing: staff accounts are limited to one device at a time for entering data. If a staff member signs in somewhere new, their old device switches to view-only and anything it had not yet synced is kept safe rather than discarded. As the owner you are not restricted this way."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get support if I run into a problem?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Email us at support@virtual-manager.app with a short description of the issue and, if possible, a screenshot with private business details removed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which platforms can I install today?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Windows (Microsoft Store) and Android (Google Play) are available now. macOS and iOS are coming soon; their download links will be added when available."
+          }
+        }
       ]
     }
   ]
@@ -95,7 +268,7 @@
   <!-- ===== NAVBAR ===== -->
   <header class="navbar" id="navbar">
     <div class="container navbar__inner">
-      <a href="#" class="navbar__brand">
+      <a href="/" class="navbar__brand">
         <div class="navbar__logo navbar__logo--img" aria-hidden="true">
           <img src="assets/logo-96.png" alt="" width="38" height="38" />
         </div>
@@ -129,7 +302,7 @@
       <div class="container hero__inner hero__inner--scene">
         <div class="hero__intro">
           <span class="hero__badge">Free to use · Windows and Android</span>
-          <h1 class="hero__headline">Offline business management for wholesale, retail and factories</h1>
+          <h1 class="hero__headline">Offline khata, POS and inventory app for wholesale, retail and factories</h1>
           <p class="hero__subtext">
             Manage sales, supplier purchases, inventory, expenses and payroll in one app. Start on your own device
             without signing in. Use optional cloud sync and staff access when you need them.
@@ -475,7 +648,7 @@
               <h3>Wholesalers and distributors</h3>
               <p>Sell on credit to many customers, buy from many suppliers and always know who owes whom.</p>
               <ul class="check-list">
-                <li>Customer khata with running balances</li>
+                <li><a href="/khata-app.html">Customer khata</a> with running balances</li>
                 <li>Last rate each customer paid, remembered</li>
                 <li>Sales agents and profit per agent</li>
               </ul>
@@ -498,7 +671,7 @@
                 <li>Receipts in English and Urdu with your stamp</li>
                 <li>Stock levels that update with every sale</li>
               </ul>
-              <a class="text-link" href="/offline-inventory-software.html">Inventory guide <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              <a class="text-link" href="/pos-software-pakistan.html">POS billing guide <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             </div>
           </article>
 
@@ -592,7 +765,8 @@
             </div>
             <h3 class="feature-card__title">Wholesale Sales &amp; Retail Billing</h3>
             <p class="feature-card__desc">Separate wholesale and retail modes, with Quick Sell for fast counter billing.
-              Sell for cash or on credit, and the app remembers the rate each customer last paid.</p>
+              Sell for cash or on credit, and the app remembers the rate each customer last paid.
+              See <a href="/pos-software-pakistan.html">POS billing</a> and the <a href="/khata-app.html">khata app</a>.</p>
           </div>
 
           <div class="feature-card">
@@ -1149,7 +1323,9 @@
           <h2 class="section-title">Get your business set up in Virtual Manager</h2>
           <p class="section-subtitle">Start with the records you already keep, from stock and credit sales to Excel sheets and attendance.</p>
         </div>
-        <div class="guide-links">
+        <div class="guide-links" style="grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));">
+          <a href="/khata-app.html"><img class="guide-links__thumb" src="assets/img/paper-khata-640.webp" width="640" height="427" loading="lazy" decoding="async" alt="" /><strong>Digital khata app</strong><span>Move your udhar register to your phone or PC and see every balance.</span></a>
+          <a href="/pos-software-pakistan.html"><img class="guide-links__thumb" src="assets/img/retail-bazaar-640.webp" width="640" height="426" loading="lazy" decoding="async" alt="" /><strong>POS and billing software</strong><span>Bill at the counter, share Urdu receipts and track stock with every sale.</span></a>
           <a href="/offline-inventory-software.html"><img class="guide-links__thumb" src="assets/img/wholesale-warehouse-640.webp" width="640" height="360" loading="lazy" decoding="async" alt="" /><strong>Offline inventory &amp; stock ledger</strong><span>Follow a purchase batch from stock received to stock sold.</span></a>
           <a href="/sales-purchase-record-app.html"><img class="guide-links__thumb" src="assets/img/shopkeeper-phone-640.webp" width="640" height="427" loading="lazy" decoding="async" alt="" /><strong>Sales, purchases &amp; khata</strong><span>Record a credit sale and track the remaining customer balance.</span></a>
           <a href="/excel-data-import.html"><img class="guide-links__thumb guide-links__thumb--contain" src="assets/graphics/excel-import-flow.svg" width="760" height="260" loading="lazy" decoding="async" alt="" /><strong>Import business records from Excel</strong><span>Map your spreadsheet columns and preview records before saving.</span></a>
@@ -1377,6 +1553,17 @@
           </div>
 
           <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false" aria-controls="faq-a-17" id="faq-q-17">
+              <span>Can I use Virtual Manager as a khata app or POS software?</span>
+              <i class="fa-solid fa-chevron-down faq-item__icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-item__answer" id="faq-a-17" role="region" aria-labelledby="faq-q-17">
+              <p>Yes. Credit sales and payments build a customer khata with running balances, and retail mode has Quick Sell
+                for fast counter billing with receipts in English and Urdu. Read the <a href="/khata-app.html">khata app guide</a>
+                or the <a href="/pos-software-pakistan.html">POS software guide</a> to see how each works.</p>
+            </div>
+          </div>
+          <div class="faq-item">
             <button class="faq-item__question" aria-expanded="false" aria-controls="faq-a-6" id="faq-q-6">
               <span>How do I download and install the app?</span>
               <i class="fa-solid fa-chevron-down faq-item__icon" aria-hidden="true"></i>
@@ -1479,6 +1666,8 @@
         <h4 class="footer__heading">Support</h4>
         <ul>
           <li><a href="#guides">Business guides</a></li>
+          <li><a href="/khata-app.html">Khata app</a></li>
+          <li><a href="/pos-software-pakistan.html">POS software</a></li>
           <li><a href="/whats-new.html">What’s new</a></li>
           <li><a href="#download">Download App</a></li>
           <li><a href="mailto:support@virtual-manager.app">Contact Support</a></li>

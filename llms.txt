@@ -1,0 +1,31 @@
+# Virtual Manager
+
+> Virtual Manager is a free, offline-first business app for Windows and Android. Wholesalers, retail shops and factories use it as a digital khata, POS billing app and inventory system: record cash and credit (udhar) sales, supplier purchases and payments, batch-tracked FIFO stock, expenses, employee attendance and payroll. Customer and item names can be typed in Urdu and print in Nastaliq on receipts and PDFs. No account or internet is needed to start; cloud sync and staff logins are optional.
+
+Key facts:
+- Price: free to download and use; core features need no subscription.
+- Platforms: Windows (Microsoft Store) and Android (Google Play). macOS and iOS are coming soon.
+- Works fully offline. Records are stored in an encrypted database on the device.
+- The app's menus are in English; business data (names, items, notes) can be in Urdu.
+- Support: support@virtual-manager.app
+
+## Product pages
+
+- [Home](https://virtualmanager.online/): overview of features, who the app is for, screenshots, download links and FAQ
+- [Khata app](https://virtualmanager.online/khata-app.html): digital khata book for udhar sales, customer payments and supplier balances
+- [POS software](https://virtualmanager.online/pos-software-pakistan.html): counter billing with Quick Sell, Urdu receipts, sales tax, stock and profit
+- [Offline inventory software](https://virtualmanager.online/offline-inventory-software.html): stock items, purchase batches, FIFO costing, stock ledger and stock report
+- [Sales and purchase app](https://virtualmanager.online/sales-purchase-record-app.html): cash and credit sales, supplier purchases, payments and PDF statements
+- [Excel data import](https://virtualmanager.online/excel-data-import.html): import sales, purchases, items, expenses, salaries, customers and suppliers from .xlsx
+- [Employee attendance and payroll](https://virtualmanager.online/employee-attendance-payroll.html): attendance, advances and salary payments
+- [What's new](https://virtualmanager.online/whats-new.html): upcoming release notes and availability
+
+## Download
+
+- [Microsoft Store (Windows)](https://apps.microsoft.com/detail/9P398S93XZ42)
+- [Google Play (Android)](https://play.google.com/store/apps/details?id=virtual_manager.app)
+
+## Optional
+
+- [Privacy policy](https://virtualmanager.online/privacy.html)
+- [Terms of use](https://virtualmanager.online/terms.html)
