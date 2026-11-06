@@ -337,70 +337,149 @@
     });
   }
 
-  /* ---- Hero Lottie animation (same animation as the app's home screen) ----
-     The static poster is the first frame, so swapping to the player is seamless.
-     The player loads after the page, never for reduced-motion users, and pauses
-     while the hero is off-screen or the tab is hidden. */
+  /* ---- Hero product scene ----
+     A short story on a loop: a sale is typed into the phone offline, saved, a receipt
+     prints, the phone comes online and the laptop's Live Overview updates.
+     The markup already shows the final frame, so no-JS and reduced-motion users get a
+     complete still. The loop only runs while the hero is on screen and the tab is visible. */
   (function () {
-    var card = document.getElementById('heroAnim');
-    var player = document.getElementById('heroAnimPlayer');
-    if (!card || !player) return;
+    var scene = document.getElementById('heroScene');
+    if (!scene) return;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reduceMotion) return;
-
-    var anim = null;
+    var stage = scene.querySelector('.hs__stage');
+    var nameEl = scene.querySelector('[data-type]');
+    var fullName = nameEl.textContent;
+    var total = document.getElementById('hsTotal');
+    var laptopNums = [].slice.call(scene.querySelectorAll('.hs-laptop [data-count]'));
+    var dots = [].slice.call(scene.querySelectorAll('.hs__sync animateMotion'));
+    var STATES = ['is-typing', 'is-item1', 'is-item2', 'is-tap', 'is-saved', 'is-online', 'is-syncing', 'is-synced', 'is-updated'];
+    var timers = [];
+    var running = false;
     var inView = true;
 
-    function sync() {
-      if (!anim) return;
-      if (inView && !document.hidden) {
-        anim.play();
-      } else {
-        anim.pause();
+    function fmt(el, v) {
+      var dec = +(el.getAttribute('data-dec') || 0);
+      return (el.getAttribute('data-prefix') || '') +
+        v.toLocaleString('en-US', { minimumFractionDigits: dec, maximumFractionDigits: dec });
+    }
+    function setNum(el, v) { el._v = v; el.textContent = fmt(el, v); }
+    function countTo(el, to, dur) {
+      var from = el._v, t0 = null;
+      function tick(t) {
+        if (!running) return;
+        if (t0 === null) t0 = t;
+        var p = Math.min(1, (t - t0) / dur);
+        var e = 1 - Math.pow(1 - p, 3);
+        setNum(el, Math.round(from + (to - from) * e));
+        if (p < 1) requestAnimationFrame(tick);
       }
+      requestAnimationFrame(tick);
+    }
+    function add(c) { scene.classList.add(c); }
+    function at(ms, fn) { timers.push(setTimeout(fn, ms)); }
+
+    function typeName(i) {
+      add('is-typing');
+      nameEl.textContent = fullName.slice(0, i);
+      if (i < fullName.length) {
+        at(55 + Math.random() * 45, function () { typeName(i + 1); });
+      } else {
+        at(350, function () { scene.classList.remove('is-typing'); });
+      }
+    }
+
+    function eraseName(i) {
+      nameEl.textContent = fullName.slice(0, i);
+      if (i > 0) at(28, function () { eraseName(i - 1); });
+    }
+
+    function resetFrame() {
+      timers.forEach(clearTimeout);
+      timers = [];
+      STATES.forEach(function (c) { scene.classList.remove(c); });
+      nameEl.textContent = '';
+      setNum(total, +total.getAttribute('data-from'));
+      laptopNums.forEach(function (el) { setNum(el, +el.getAttribute('data-from')); });
+    }
+
+    function play() {
+      resetFrame();
+      at(350, function () { typeName(1); });
+      at(1700, function () { add('is-item1'); countTo(total, 2400, 550); });
+      at(2500, function () { add('is-item2'); countTo(total, 4200, 550); });
+      at(3400, function () { add('is-tap'); });
+      at(3700, function () { add('is-saved'); });
+      at(5500, function () { add('is-online'); });
+      at(5900, function () {
+        add('is-syncing');
+        dots.forEach(function (d, i) {
+          at(i * 160, function () { if (d.beginElement) d.beginElement(); });
+        });
+      });
+      at(7200, function () {
+        add('is-synced');
+        add('is-updated');
+        scene.classList.remove('is-syncing');
+        laptopNums.forEach(function (el) { countTo(el, +el.getAttribute('data-to'), 1100); });
+      });
+      // Rewind: dropping the classes plays the transitions backwards.
+      at(12200, function () {
+        STATES.forEach(function (c) { scene.classList.remove(c); });
+        eraseName(fullName.length);
+        countTo(total, 0, 500);
+        laptopNums.forEach(function (el) { countTo(el, +el.getAttribute('data-from'), 500); });
+      });
+      at(13300, play);
     }
 
     function start() {
-      if (!window.lottie) return;
-      anim = window.lottie.loadAnimation({
-        container: player,
-        renderer: 'svg',
-        loop: true,
-        autoplay: false,
-        path: player.getAttribute('data-src'),
-        rendererSettings: { preserveAspectRatio: 'xMidYMid meet' }
-      });
-      anim.addEventListener('DOMLoaded', function () {
-        card.classList.add('is-playing');
+      if (running) return;
+      running = true;
+      scene.classList.add('hs--run');
+      play();
+    }
+    function stop() {
+      if (!running) return;
+      running = false;
+      timers.forEach(clearTimeout);
+      timers = [];
+    }
+    function sync() {
+      if (inView && !document.hidden) start(); else stop();
+    }
+
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) {
+        inView = entries[0].isIntersecting;
         sync();
-      });
-      anim.addEventListener('data_failed', function () {
-        anim.destroy();
-        anim = null;
-      });
-
-      if ('IntersectionObserver' in window) {
-        new IntersectionObserver(function (entries) {
-          inView = entries[0].isIntersecting;
-          sync();
-        }, { threshold: 0.05 }).observe(card);
-      }
-      document.addEventListener('visibilitychange', sync);
-    }
-
-    function loadPlayer() {
-      var script = document.createElement('script');
-      script.src = 'js/vendor/lottie_light.min.js?v=5.12.2';
-      script.async = true;
-      script.onload = start;
-      document.head.appendChild(script);
-    }
-
-    if (document.readyState === 'complete') {
-      loadPlayer();
+      }, { threshold: 0.15 }).observe(scene);
     } else {
-      window.addEventListener('load', loadPlayer, { once: true });
+      start();
+    }
+    document.addEventListener('visibilitychange', sync);
+
+    // Gentle 3D tilt that follows the pointer (mouse / pen only).
+    var hero = document.getElementById('hero');
+    if (hero && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      var pending = false, lastE = null;
+      hero.addEventListener('pointermove', function (e) {
+        lastE = e;
+        if (pending) return;
+        pending = true;
+        requestAnimationFrame(function () {
+          pending = false;
+          var r = scene.getBoundingClientRect();
+          var x = (lastE.clientX - (r.left + r.width / 2)) / window.innerWidth;
+          var y = (lastE.clientY - (r.top + r.height / 2)) / window.innerHeight;
+          stage.style.setProperty('--ry', (x * 10).toFixed(2) + 'deg');
+          stage.style.setProperty('--rx', (y * -8).toFixed(2) + 'deg');
+        });
+      });
+      hero.addEventListener('pointerleave', function () {
+        stage.style.setProperty('--ry', '0deg');
+        stage.style.setProperty('--rx', '0deg');
+      });
     }
   })();
 

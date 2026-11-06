@@ -23,9 +23,6 @@
   <meta name="twitter:description" content="Manage sales, purchases, inventory and payroll offline. Virtual Manager serves wholesalers, retailers and factories on Windows and Android." />
   <meta name="twitter:image" content="https://virtualmanager.online/assets/og-image.jpg" />
 
-  <!-- Preload hero image (LCP) -->
-  <link rel="preload" as="image" href="assets/img/robot-pc-poster.webp" type="image/webp" fetchpriority="high" />
-
   <!-- Google Fonts (only weights actually used) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,7 +35,7 @@
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /></noscript>
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css?v=10" />
+  <link rel="stylesheet" href="css/styles.css?v=11" />
 
   <!-- Favicon -->
   <link rel="icon" href="assets/favicon.ico" sizes="48x48" />
@@ -129,7 +126,7 @@
 
     <!-- ===== HERO ===== -->
     <section class="hero" id="hero">
-      <div class="container hero__inner hero__inner--lottie">
+      <div class="container hero__inner hero__inner--scene">
         <div class="hero__intro">
           <span class="hero__badge">Free to use · Windows and Android</span>
           <h1 class="hero__headline">Offline business management for wholesale, retail and factories</h1>
@@ -140,26 +137,166 @@
         </div>
 
         <div class="hero__visual">
-          <div class="hero-anim" id="heroAnim" role="img"
-            aria-label="Animation of two robot arms organising business records on a laptop screen">
-            <div class="hero-anim__bar" aria-hidden="true">
-              <img src="assets/logo-96.png" width="18" height="18" alt="" />
-              <span>Virtual Manager</span>
-              <span class="hero-anim__dots"><i></i><i></i><i></i></span>
-            </div>
-            <div class="hero-anim__stage">
-              <img class="hero-anim__poster" src="assets/img/robot-pc-poster.webp" width="1020" height="510"
-                alt="" fetchpriority="high" decoding="async" />
-              <div class="hero-anim__player" id="heroAnimPlayer" aria-hidden="true"
-                data-src="assets/animations/robot-pc.json"></div>
-            </div>
-            <div class="hero-chip hero-chip--offline" aria-hidden="true">
-              <span class="hero-chip__icon"><i class="fa-solid fa-circle-check"></i></span>
-              <span><strong>Saved on this device</strong><small>No internet needed</small></span>
-            </div>
-            <div class="hero-chip hero-chip--profit" aria-hidden="true">
-              <span class="hero-chip__icon"><i class="fa-solid fa-coins"></i></span>
-              <span><strong>Profit after stock cost</strong><small>Sales − cost − expenses</small></span>
+          <!-- Coded product scene: a sale is recorded offline on the phone, a receipt prints,
+               then (optional) sync updates the Live Overview on the laptop. js/main.js drives the loop;
+               without JS or with reduced motion the final frame is shown as a still. -->
+          <div class="hs" id="heroScene" role="img"
+            aria-label="Virtual Manager on a phone and a laptop: a sale for Rs 4,200 is saved offline on the phone, a receipt prints, and the laptop's Live Overview updates sales and profit">
+            <div class="hs__stage" aria-hidden="true">
+              <span class="hs__glow"></span>
+
+              <!-- Sync arc (phone → laptop) -->
+              <svg class="hs__sync" viewBox="0 0 1000 800" preserveAspectRatio="xMidYMid meet">
+                <path id="hsSyncPath" class="hs__sync-path" d="M170 150 C 70 60, 140 -30, 345 112" />
+                <circle class="hs__sync-dot" r="10"><animateMotion dur="1.1s" begin="indefinite" fill="freeze"><mpath href="#hsSyncPath" /></animateMotion></circle>
+                <circle class="hs__sync-dot" r="8"><animateMotion dur="1.1s" begin="indefinite" fill="freeze"><mpath href="#hsSyncPath" /></animateMotion></circle>
+                <circle class="hs__sync-dot" r="6"><animateMotion dur="1.1s" begin="indefinite" fill="freeze"><mpath href="#hsSyncPath" /></animateMotion></circle>
+              </svg>
+              <span class="hs__cloud"><i class="fa-solid fa-cloud"></i></span>
+
+              <!-- ===== Laptop: Live Overview ===== -->
+              <div class="hs-laptop">
+                <div class="hs-laptop__lid">
+                  <span class="hs-laptop__cam"></span>
+                  <div class="hs-laptop__screen">
+                    <div class="hs-app">
+                      <div class="hs-app__side">
+                        <img src="assets/logo-96.png" width="20" height="20" alt="" />
+                        <i class="fa-solid fa-gauge-high is-active"></i>
+                        <i class="fa-solid fa-cash-register"></i>
+                        <i class="fa-solid fa-truck-ramp-box"></i>
+                        <i class="fa-solid fa-boxes-stacked"></i>
+                        <i class="fa-solid fa-receipt"></i>
+                        <i class="fa-solid fa-user-group"></i>
+                      </div>
+                      <div class="hs-app__main">
+                        <div class="hs-app__top">
+                          <span class="hs-live"></span><strong>Live Overview</strong>
+                          <span class="hs-app__range">All Time <i class="fa-solid fa-caret-down"></i></span>
+                        </div>
+                        <div class="hs-app__row3">
+                          <div class="hs-card hs-card--sales">
+                            <span>Sales</span>
+                            <b data-count data-from="26000" data-to="30200" data-prefix="Rs " data-dec="2">Rs 30,200.00</b>
+                          </div>
+                          <i class="hs-op">−</i>
+                          <div class="hs-card hs-card--cost">
+                            <span>Cost of stock sold</span>
+                            <b data-count data-from="20000" data-to="23000" data-prefix="Rs " data-dec="2">Rs 23,000.00</b>
+                          </div>
+                          <i class="hs-op">−</i>
+                          <div class="hs-card">
+                            <span>Recorded expenses</span>
+                            <b>Rs 1,500.00</b>
+                          </div>
+                        </div>
+                        <div class="hs-profit">
+                          <div>
+                            <span>Profit</span>
+                            <b data-count data-from="4500" data-to="5700" data-prefix="Rs " data-dec="2">Rs 5,700.00</b>
+                            <small>Salary payments: Excluded</small>
+                          </div>
+                          <div class="hs-bars">
+                            <i style="--h:38%"></i><i style="--h:52%"></i><i style="--h:44%"></i><i style="--h:63%"></i><i style="--h:57%"></i><i style="--h:71%"></i><i class="hs-bars__new" style="--h:92%"></i>
+                          </div>
+                        </div>
+                        <div class="hs-app__row2">
+                          <div class="hs-card hs-card--inv">
+                            <span>Inventory value</span>
+                            <b data-count data-from="80000" data-to="77000" data-prefix="Rs " data-dec="2">Rs 77,000.00</b>
+                            <small>Current · price-based</small>
+                          </div>
+                          <div class="hs-card">
+                            <span>Customer pending</span>
+                            <b>Rs 7,200.00</b>
+                            <small>Current balance</small>
+                          </div>
+                        </div>
+                        <div class="hs-activity">
+                          <span class="hs-activity__icon"><i class="fa-solid fa-cash-register"></i></span>
+                          <span class="hs-activity__text"><strong>Receipt #3 · Harris Traders</strong><small>From phone · just now</small></span>
+                          <b>+ Rs 4,200.00</b>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="hs-laptop__base"></div>
+              </div>
+
+              <!-- ===== Receipt (slides out from behind the phone) ===== -->
+              <div class="hs-receipt">
+                <strong>Virtual Manager</strong>
+                <small>Receipt #3 · Harris Traders</small>
+                <hr />
+                <p><span>Wood planks 12×200</span><span>2,400</span></p>
+                <p><span>Steel bolts 30×60</span><span>1,800</span></p>
+                <hr />
+                <p class="hs-receipt__total"><span>Total</span><span>Rs 4,200</span></p>
+                <p class="hs-receipt__ur" lang="ur" dir="rtl">شکریہ، دوبارہ تشریف لائیں</p>
+              </div>
+
+              <!-- ===== Phone: Add Sale ===== -->
+              <div class="hs-phone">
+                <div class="hs-phone__screen">
+                  <div class="hs-phone__status">
+                    <span>10:24</span>
+                    <span class="hs-phone__island"></span>
+                    <span class="hs-phone__icons">
+                      <i class="fa-solid fa-plane hs-net-off"></i>
+                      <i class="fa-solid fa-wifi hs-net-on"></i>
+                      <i class="fa-solid fa-battery-three-quarters"></i>
+                    </span>
+                  </div>
+                  <div class="hs-phone__bar">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <i class="fa-solid fa-cash-register hs-green"></i>
+                    <strong>Add Sale</strong>
+                  </div>
+                  <div class="hs-field">
+                    <span class="hs-field__label">Customer Name</span>
+                    <i class="fa-regular fa-user"></i>
+                    <span class="hs-field__value" data-type>Harris Traders</span><span class="hs-caret"></span>
+                  </div>
+                  <div class="hs-phone__meta">
+                    <span>Balance <b>0.00</b></span>
+                    <span class="hs-pill">Receipt #<b>3</b></span>
+                  </div>
+                  <div class="hs-phone__btns">
+                    <span class="hs-obtn hs-obtn--teal"><i class="fa-solid fa-wallet"></i> Payment</span>
+                    <span class="hs-obtn"><i class="fa-solid fa-plus"></i> Add Sale</span>
+                  </div>
+                  <div class="hs-item hs-item--1">
+                    <span><strong>#1 Wood planks</strong><small>12 × 200</small></span>
+                    <b>2,400.00</b>
+                  </div>
+                  <div class="hs-item hs-item--2">
+                    <span><strong>#2 Steel bolts</strong><small>30 × 60</small></span>
+                    <b>1,800.00</b>
+                  </div>
+                  <div class="hs-toast"><i class="fa-solid fa-circle-check"></i> Saved on this device</div>
+                  <div class="hs-phone__foot">
+                    <span><small>Total Amount</small><b id="hsTotal" data-count data-from="0" data-to="4200" data-dec="2">4,200.00</b></span>
+                    <span class="hs-save"><i class="fa-solid fa-floppy-disk"></i> Save Sale<i class="hs-tap"></i></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ===== Floating chips ===== -->
+              <div class="hs-chip hs-chip--status">
+                <span class="hs-chip__face hs-chip__face--offline">
+                  <span class="hs-chip__icon"><i class="fa-solid fa-circle-check"></i></span>
+                  <span><strong>Saved on this device</strong><small>No internet needed</small></span>
+                </span>
+                <span class="hs-chip__face hs-chip__face--sync">
+                  <span class="hs-chip__icon"><i class="fa-solid fa-rotate"></i></span>
+                  <span><strong>Synced to your laptop</strong><small>Optional cloud sync</small></span>
+                </span>
+              </div>
+              <div class="hs-chip hs-chip--profit">
+                <span class="hs-chip__icon"><i class="fa-solid fa-arrow-trend-up"></i></span>
+                <span><strong>Profit + Rs 1,200</strong><small>After stock cost (FIFO)</small></span>
+              </div>
             </div>
           </div>
         </div>
@@ -1362,7 +1499,7 @@
   </footer>
 
   <!-- JavaScript -->
-  <script src="js/main.js?v=6"></script>
+  <script src="js/main.js?v=7"></script>
 </body>
 
 </html>
